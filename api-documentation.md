@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Version Information](#version-information)
+- [Overview](#overview)
 - [Base URLs](#base-urls)
 - [Authentication](#authentication)
 - [Headers](#headers)
@@ -85,6 +85,7 @@ Authorization: Bearer sk_test_123456789
 Content-Type: application/json
 Accept: application/json
 ```
+
 ## Create Payment
 
 Creates a new payment request.
