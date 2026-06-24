@@ -336,13 +336,14 @@ The API uses standard HTTP status codes to indicate request outcomes.
 | UNSUPPORTED_PAYMENT_METHOD | Payment method not supported |
 | RATE_LIMIT_EXCEEDED | Too many requests |
 
+
 ## Pagination
 
-Pagination is supported for endpoints that return large collections of resources.
+Pagination is supported for endpoints that return large collections of resources, such as:
 
-## Rate Limiting
-
-To ensure platform stability, API requests are subject to rate limits.
+```http
+GET /payments
+```
 
 ### Query Parameters
 
@@ -356,6 +357,9 @@ To ensure platform stability, API requests are subject to rate limits.
 ```http
 GET /payments?page=1&limit=20
 ```
+
+### Example Response
+
 ```json
 {
   "page": 1,
@@ -371,6 +375,7 @@ GET /payments?page=1&limit=20
   ]
 }
 ```
+
 ### Response Fields
 
 | Field | Type | Description |
@@ -381,6 +386,19 @@ GET /payments?page=1&limit=20
 | total_pages | integer | Total number of pages |
 | data | array | Collection of returned resources |
 
+### Notes
+
+- Pagination parameters are optional.
+- Default page value is 1.
+- Default limit value is 20.
+- Maximum limit value is 100.
+- Results are returned in descending order of creation time by default.
+- Requests for pages beyond the available range return an empty data array.
+
+## Rate Limiting
+
+To ensure platform stability, API requests are subject to rate limits.
+
 ### Limits
 
 | Limit Type | Value |
@@ -388,13 +406,6 @@ GET /payments?page=1&limit=20
 | Requests Per Minute | 100 |
 | Requests Per Hour | 5000 |
 
-### Notes
-
-- Pagination parameters are optional.
-- Default page value is 1.
-- Default limit value is 20.
-- Maximum limit value is 100.
-  
 ### Rate Limit Response
 
 ```json
@@ -411,3 +422,4 @@ GET /payments?page=1&limit=20
 - Implement request retries with exponential backoff.
 - Avoid sending duplicate requests.
 - Cache frequently requested data where possible.
+```
