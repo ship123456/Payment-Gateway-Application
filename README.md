@@ -11,6 +11,12 @@ It supports multiple payment methods including credit cards, debit cards, UPI, n
 
 All APIs follow REST principles, use JSON format, and require HTTPS for secure communication. Authentication is handled using API keys.
 
+## API Reference
+
+For detailed API endpoints, request/response examples, authentication headers, and webhook payloads, see:
+
+[API Reference](./api.md)
+
 ---
 
 ## Features
