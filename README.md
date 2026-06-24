@@ -61,7 +61,6 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - HTTPS  
 - Webhooks
 - API Key Authentication  
-- OAuth 2.0 (optional extension)  
 - Secure Payment Processor Integration 
 - TLS Encryption  
 - Relational Database  
@@ -75,6 +74,15 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - Access to sandbox environment  
 - Internet connectivity  
 
+## Sandbox Environment
+
+A sandbox environment is available for testing payment integrations without processing real transactions.
+
+- No real funds are transferred.
+- Test API credentials are required.
+- Sandbox data is separate from production data.
+- Webhook events can be tested safely before deployment.
+  
 ## Assumptions
 
 - You understand basic REST concepts  
@@ -136,7 +144,13 @@ Authorization: Bearer <API_KEY>
 - GBP  
 - INR  
 - AUD  
-- CAD  
+- CAD
+
+### Currency Notes
+
+- Currency availability may vary by payment provider and region.
+- Exchange rates are determined by the payment processor or banking partner.
+- Additional conversion fees may apply for international transactions.
 
 ## Payment Flow
 
@@ -185,7 +199,11 @@ The system follows a service-oriented architecture.
 - Audit logging enabled  
 - No storage of raw card data  
 - Monitoring of failed login attempts  
-- Periodic security reviews  
+- Periodic security reviews
+
+### Compliance
+
+- Payment processors handling card data should maintain PCI DSS compliance.
 
 ## Error Handling
 
