@@ -428,7 +428,7 @@ GET /transactions?page=1&limit=20&status=success
 |------|------------|
 | 200 | Success |
 | 401 | Unauthorized |
-```
+
 
 ## Webhook Events
 
@@ -624,6 +624,7 @@ curl -X POST https://api.paymentgateway.com/v1/payments \
     "customer_id": "cust_12345",
     "payment_method": "UPI"
   }'
+```
 
 ### JavaScript Example
 
