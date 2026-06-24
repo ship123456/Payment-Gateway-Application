@@ -8,6 +8,7 @@
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
+- [Environment Support](#environment-support)
 - [Assumptions](#assumptions)
 - [Installation](#installation)
 - [Authentication](#authentication)
