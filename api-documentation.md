@@ -482,6 +482,21 @@ Before processing a webhook event:
 3. Compare the generated signature with the `X-Signature` header.
 4. Reject requests with invalid signatures.
 
+### Verification Example
+
+```pseudo
+payload = request.body
+receivedSignature = request.headers["X-Signature"]
+
+expectedSignature = HMAC_SHA256(payload, WEBHOOK_SECRET)
+
+if receivedSignature != expectedSignature:
+    return HTTP 401 Unauthorized
+
+processWebhookEvent()
+return HTTP 200 OK
+```
+
 
 ## Error Handling
 
