@@ -12,6 +12,7 @@
 - [Refund Payment](#refund-payment)
 - [Webhook Events](#webhook-events)
 - [Error Handling](#error-handling)
+- [Pagination](#pagination)
 - [Rate Limiting](#rate-limiting)
 
 ## Version Information
@@ -335,9 +336,20 @@ The API uses standard HTTP status codes to indicate request outcomes.
 | UNSUPPORTED_PAYMENT_METHOD | Payment method not supported |
 | RATE_LIMIT_EXCEEDED | Too many requests |
 
+## Pagination
+
+Pagination is supported for endpoints that return large collections of resources.
+
 ## Rate Limiting
 
 To ensure platform stability, API requests are subject to rate limits.
+
+### Query Parameters
+
+| Parameter | Type | Description |
+|------------|--------|-------------|
+| page | integer | Page number to retrieve |
+| limit | integer | Number of records per page |
 
 ### Limits
 
