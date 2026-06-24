@@ -127,6 +127,16 @@ POST /payments
 }
 ```
 
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| payment_id | string | Unique payment identifier |
+| status | string | Current payment status |
+| amount | integer | Payment amount |
+| currency | string | Transaction currency |
+
+
 ### Response Codes
 
 | Code | Description |
@@ -168,6 +178,15 @@ GET /payments/pay_123456
   "payment_method": "UPI"
 }
 ```
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| payment_id | string | Unique payment identifier |
+| status | string | Current payment status |
+| amount | integer | Payment amount |
+| currency | string | Transaction currency |
+| payment_method | string | Payment method used |
 
 ### Response Codes
 
