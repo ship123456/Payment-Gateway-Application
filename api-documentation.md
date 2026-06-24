@@ -6,6 +6,7 @@
 - [Overview](#overview)
 - [Base URLs](#base-urls)
 - [Authentication](#authentication)
+- [Idempotency](#idempotency)
 - [Headers](#headers)
 - [Create Payment](#create-payment)
 - [Get Payment Status](#get-payment-status)
@@ -68,6 +69,23 @@ Authorization: Bearer sk_test_123456789
 - Do not expose API keys in frontend code.
 - Use sandbox keys for testing.
 - Use production keys only for live transactions.
+
+## Idempotency
+
+Idempotency keys prevent duplicate payment creation when the same request is submitted multiple times.
+
+### Header
+
+```http
+Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
+```
+
+### Notes
+
+- Each key should be unique for a payment request.
+- Reusing the same key with the same request returns the original response.
+- Idempotency keys help prevent accidental duplicate transactions.
+```
 
 ## Headers
 
