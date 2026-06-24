@@ -278,6 +278,108 @@ POST /payments/{payment_id}/refund
 | 404 | Payment not found |
 | 401 | Unauthorized |
 
+## List Payments
+
+Retrieves a paginated list of payments.
+
+### Endpoint
+
+```http
+GET /payments
+```
+
+### Query Parameters
+
+| Parameter | Type | Required | Description |
+|------------|--------|----------|-------------|
+| page | integer | No | Page number |
+| limit | integer | No | Records per page |
+| status | string | No | Filter by payment status |
+
+### Example Request
+
+```http
+GET /payments?page=1&limit=20&status=success
+```
+
+### Success Response
+
+```json
+{
+  "page": 1,
+  "limit": 20,
+  "total_records": 125,
+  "total_pages": 7,
+  "data": [
+    {
+      "payment_id": "pay_123456",
+      "status": "success",
+      "amount": 1000,
+      "currency": "INR"
+    }
+  ]
+}
+```
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
+
+## List Refunds
+
+Retrieves a paginated list of refunds.
+
+### Endpoint
+
+```http
+GET /refunds
+```
+
+### Query Parameters
+
+| Parameter | Type | Required | Description |
+|------------|--------|----------|-------------|
+| page | integer | No | Page number |
+| limit | integer | No | Records per page |
+| status | string | No | Filter by refund status |
+
+### Example Request
+
+```http
+GET /refunds?page=1&limit=20&status=processed
+```
+
+### Success Response
+
+```json
+{
+  "page": 1,
+  "limit": 20,
+  "total_records": 50,
+  "total_pages": 3,
+  "data": [
+    {
+      "refund_id": "ref_123456",
+      "payment_id": "pay_123456",
+      "status": "processed",
+      "amount": 500
+    }
+  ]
+}
+```
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
+
+
+
 ## Webhook Events
 
 Webhook events provide real-time notifications when a payment status changes.
