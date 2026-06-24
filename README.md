@@ -138,7 +138,7 @@ The following workflow describes the payment lifecycle from payment initiation t
 7. A webhook notification is sent to the configured endpoint.
 8. The application updates the payment status and displays the result to the customer.
 
-### Payment Statuses
+## Payment Statuses
 
 - Pending
 - Processing
@@ -147,7 +147,7 @@ The following workflow describes the payment lifecycle from payment initiation t
 - Cancelled
 - Refunded
 
-### Webhook Events
+## Webhook Events
 
 The Payment Gateway sends webhook notifications for important payment events.
 
@@ -209,14 +209,6 @@ Security is a critical aspect of payment processing. The Payment Gateway impleme
 - Payment card information is never stored in plain text.
 - Failed authentication attempts are monitored and logged.
 - Security controls are reviewed and updated periodically.
-
-### Best Practices
-
-- Store API keys securely and never expose them in client-side code.
-- Rotate API credentials periodically.
-- Use strong access controls for merchant accounts.
-- Monitor transaction logs for suspicious activity.
-- Immediately revoke compromised API credentials.
 
 ## Error Handling
 
