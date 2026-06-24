@@ -1,6 +1,29 @@
 
 # Payment Gateway Documentation
 
+## Table of Contents
+
+- [Overview](#overview)
+- [API Reference](#api-reference)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Assumptions](#assumptions)
+- [Installation](#installation)
+- [Authentication](#authentication)
+- [Supported Payment Methods](#supported-payment-methods)
+- [Payment Flow](#payment-flow)
+- [Architecture](#architecture)
+- [Security Considerations](#security-considerations)
+- [Error Handling](#error-handling)
+- [Payment Statuses](#payment-statuses)
+- [Webhook Events](#webhook-events)
+- [FAQ](#faq)
+- [Glossary](#glossary)
+- [Known Limitations](#known-limitations)
+- [Future Enhancements](#future-enhancements)
+- [Project Structure](#project-structure)
+
 ## Overview
 
 The Payment Gateway System enables businesses to securely process online payments through a unified set of REST APIs. It supports payment creation, transaction tracking, refunds, and real-time payment updates via webhooks.
@@ -15,8 +38,7 @@ All APIs follow REST principles, use JSON format, and require HTTPS for secure c
 
 For detailed API endpoints, request/response examples, authentication headers, and webhook payloads, see:
 
-[API Reference](./api.md)
-
+[API Documentation](./api-documentation.md)
 ---
 
 ## Features
@@ -308,6 +330,8 @@ Yes, all requests must use HTTPS.
 
 ```
 /payment-gateway
+ ├── README.md
+ ├── api-documentation.md
  ├── controllers
  ├── services
  ├── routes
