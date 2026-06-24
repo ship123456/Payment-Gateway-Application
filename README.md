@@ -39,7 +39,7 @@ All APIs follow REST principles, use JSON format, and require HTTPS for secure c
 For detailed API endpoints, request/response examples, authentication headers, and webhook payloads, see:
 
 [API Documentation](./api-documentation.md)
----
+
 
 ## Features
 
@@ -54,21 +54,17 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - Sandbox testing environment  
 - Multi-currency support  
 
----
-
 ## Tech Stack
 
 - REST APIs  
 - JSON  
 - HTTPS  
-- Webhooks  
+- Webhooks
 - API Key Authentication  
 - OAuth 2.0 (optional extension)  
-- Secure Payment Processor Integration  
+- Secure Payment Processor Integration 
 - TLS Encryption  
 - Relational Database  
-
----
 
 ## Prerequisites
 
@@ -79,8 +75,6 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - Access to sandbox environment  
 - Internet connectivity  
 
----
-
 ## Assumptions
 
 - You understand basic REST concepts  
@@ -89,8 +83,6 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - You use secure HTTPS communication  
 - You are familiar with JSON format  
 - You have a development/testing environment  
-
----
 
 ## Installation
 
@@ -102,8 +94,6 @@ For detailed API endpoints, request/response examples, authentication headers, a
 6. Configure webhook URL  
 7. Verify API connection  
 8. Run sandbox transaction  
-
----
 
 ## Authentication
 
@@ -129,8 +119,6 @@ Authorization: Bearer <API_KEY>
 - Rotate keys periodically  
 - Use HTTPS only  
 
----
-
 ## Supported Payment Methods
 
 - Credit Cards  
@@ -150,8 +138,6 @@ Authorization: Bearer <API_KEY>
 - AUD  
 - CAD  
 
----
-
 ## Payment Flow
 
 The payment process follows these steps:
@@ -164,8 +150,6 @@ The payment process follows these steps:
 6. Payment status is generated  
 7. Webhook event is triggered  
 8. Response returned to client  
-
----
 
 ## Architecture
 
@@ -190,8 +174,6 @@ The system follows a service-oriented architecture.
 - Processor → external payment execution  
 - Webhook Service → async notifications  
 
----
-
 ## Security Considerations
 
 ### Security Measures
@@ -204,8 +186,6 @@ The system follows a service-oriented architecture.
 - No storage of raw card data  
 - Monitoring of failed login attempts  
 - Periodic security reviews  
-
----
 
 ## Error Handling
 
@@ -245,8 +225,6 @@ The system follows a service-oriented architecture.
 - Rate limit exceeded  
 - Insufficient permissions  
 
----
-
 ## Payment Statuses
 
 - Pending  
@@ -256,8 +234,6 @@ The system follows a service-oriented architecture.
 - Cancelled  
 - Refunded  
 
----
-
 ## Webhook Events
 
 - payment.created  
@@ -266,8 +242,6 @@ The system follows a service-oriented architecture.
 - payment.failed  
 - payment.cancelled  
 - payment.refunded  
-
----
 
 ## FAQ
 
@@ -291,8 +265,6 @@ Yes, for testing integrations.
 
 Yes, all requests must use HTTPS.
 
----
-
 ## Glossary
 
 - API Key – Authentication credential  
@@ -305,16 +277,12 @@ Yes, all requests must use HTTPS.
 - JSON – Data format  
 - HTTPS – Secure protocol  
 
----
-
 ## Known Limitations
 
 - Requires stable internet connection  
 - Sandbox data not real  
 - Some payment methods region-dependent  
 - Webhook delivery not guaranteed 100%  
-
----
 
 ## Future Enhancements
 
@@ -323,8 +291,6 @@ Yes, all requests must use HTTPS.
 - Subscription billing support  
 - Multi-region failover  
 - Advanced analytics dashboard  
-
----
 
 ## Project Structure
 
@@ -340,5 +306,3 @@ Yes, all requests must use HTTPS.
  ├── config
  └── tests
 ```
-
----
