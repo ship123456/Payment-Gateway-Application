@@ -1,293 +1,314 @@
+
 # Payment Gateway Documentation
 
 ## Overview
 
-The Payment Gateway System enables businesses to securely process online payments through a unified set of REST APIs. The platform supports payment creation, transaction tracking, refunds, and real-time payment notifications through webhooks.
+The Payment Gateway System enables businesses to securely process online payments through a unified set of REST APIs. It supports payment creation, transaction tracking, refunds, and real-time payment updates via webhooks.
 
-The system is designed to simplify payment integration for web and mobile applications while ensuring secure communication, reliable transaction processing, and seamless payment status updates. It supports multiple payment methods, including credit cards, debit cards, UPI, net banking, and digital wallets.
+The system is designed for seamless integration with web and mobile applications while ensuring secure, scalable, and reliable payment processing.
 
-The Payment Gateway APIs follow REST principles and exchange data in JSON format. Authentication is performed using API keys, and all requests must be made over HTTPS to ensure secure data transmission. The platform also provides standardized error responses to help developers quickly identify and resolve integration issues.
+It supports multiple payment methods including credit cards, debit cards, UPI, net banking, and digital wallets.
+
+All APIs follow REST principles, use JSON format, and require HTTPS for secure communication. Authentication is handled using API keys.
+
+---
 
 ## Features
 
-- Secure payment processing through REST APIs
-- Support for credit cards, debit cards, UPI, net banking, and digital wallets
-- Real-time payment status tracking
-- Full and partial refund management
-- Webhook notifications for payment events
-- API key-based authentication and authorization
-- Transaction history and audit tracking
-- Standardized error handling and response codes
-- Multi-currency payment support
-- Sandbox environment for testing integrations
-- Payment cancellation and reversal support
+- Secure payment processing via REST APIs  
+- Multi-payment method support (Cards, UPI, Wallets, Net Banking)  
+- Real-time transaction status tracking  
+- Refunds (full and partial)  
+- Webhook-based event notifications  
+- API key authentication  
+- Transaction history tracking  
+- Standard error handling  
+- Sandbox testing environment  
+- Multi-currency support  
+
+---
 
 ## Tech Stack
 
-- REST APIs
-- JSON
-- HTTPS
-- Webhooks
-- API Keys
-- OAuth 2.0
-- Payment Processing Services
-- SSL/TLS Encryption
-- Cloud Infrastructure
-- Relational Databases
+- REST APIs  
+- JSON  
+- HTTPS  
+- Webhooks  
+- API Key Authentication  
+- OAuth 2.0 (optional extension)  
+- Secure Payment Processor Integration  
+- TLS Encryption  
+- Relational Database  
+
+---
 
 ## Prerequisites
 
-Before using the Payment Gateway APIs, ensure you have:
+- Active merchant account  
+- Valid API key  
+- HTTPS-enabled application  
+- Basic understanding of REST APIs  
+- Access to sandbox environment  
+- Internet connectivity  
 
-- An active merchant account
-- A valid API key
-- HTTPS-enabled application
-- Internet connectivity
-- Access to the Payment Gateway Dashboard
-- A supported programming language or framework for integration
-- Access to sandbox credentials for testing
-- Basic understanding of HTTP status codes
+---
 
 ## Assumptions
 
-This documentation assumes that:
+- You understand basic REST concepts  
+- You have a merchant account  
+- You possess valid API credentials  
+- You use secure HTTPS communication  
+- You are familiar with JSON format  
+- You have a development/testing environment  
 
-- The reader has a basic understanding of REST APIs
-- The reader has access to a merchant account
-- The reader possesses valid API credentials
-- The integration is performed over a secure HTTPS connection.
-- The reader is familiar with JSON request and response formats.
-- The reader has basic knowledge of payment processing concepts.
-- The reader has access to the required development and testing environments.
-
+---
 
 ## Installation
 
-1. Create a merchant account.
-2. Generate API credentials from the Payment Gateway Dashboard.
-3. Configure the API key in your application.
-4. Set up a secure HTTPS endpoint.
-5. Install the required dependencies for your application.
-6. Configure webhook endpoints to receive payment notifications.
-7. Verify connectivity using the health check API.
-8. Perform a test transaction using sandbox credentials.
+1. Create merchant account  
+2. Generate API keys from dashboard  
+3. Configure API key in application  
+4. Set up HTTPS endpoint  
+5. Install required dependencies  
+6. Configure webhook URL  
+7. Verify API connection  
+8. Run sandbox transaction  
+
+---
 
 ## Authentication
 
-All API requests require a valid API key in the request header.
-
-### Authentication Method
-
-The Payment Gateway uses API key-based authentication to authorize requests.
+All requests require API key authentication.
 
 ### Header Format
-
+```
 Authorization: Bearer <API_KEY>
-
-### Security Best Practices
-
-- Store API keys securely.
-- Never expose API keys in client-side code.
-- Rotate API keys periodically.
-- Use HTTPS for all API requests.
-- Revoke compromised API keys immediately.
+```
 
 ### Authentication Errors
 
-| Status Code | Description |
-|:-----------:|:-----------:|
+| Code | Meaning |
+|------|--------|
 | 401 | Invalid API key |
 | 403 | Access denied |
 | 429 | Rate limit exceeded |
 
+### Security Notes
+
+- Never expose API keys in frontend  
+- Store keys securely  
+- Rotate keys periodically  
+- Use HTTPS only  
+
+---
+
 ## Supported Payment Methods
 
-The Payment Gateway supports multiple payment methods to provide flexibility for businesses and customers.
-
-- Credit Cards
-- Debit Cards
-- UPI
-- Net Banking
-- Digital Wallets
-- EMI Payments
-- International Cards
-
-### Payment Method Availability
-
-The availability of payment methods may vary based on merchant configuration, customer location, and regulatory requirements.
+- Credit Cards  
+- Debit Cards  
+- UPI  
+- Net Banking  
+- Wallets  
+- EMI  
+- International Cards  
 
 ### Supported Currencies
 
-- USD
-- EUR
-- GBP
-- INR
-- AUD
-- CAD
+- USD  
+- EUR  
+- GBP  
+- INR  
+- AUD  
+- CAD  
+
+---
 
 ## Payment Flow
 
-The following workflow describes the payment lifecycle from payment initiation to transaction completion.
+The payment process follows these steps:
 
-1. Customer initiates a payment through the application.
-2. The application sends a payment request to the Payment Gateway API.
-3. The Payment Gateway validates the request and processes the transaction.
-4. The customer completes the payment using the selected payment method.
-5. The Payment Gateway communicates with the payment processor and financial institution.
-6. The transaction status is returned to the application.
-7. A webhook notification is sent to the configured endpoint.
-8. The application updates the payment status and displays the result to the customer.
+1. Customer initiates payment  
+2. Request sent to Payment Gateway API  
+3. API validates request and authentication  
+4. Payment is processed via processor  
+5. Bank/card network authorizes transaction  
+6. Payment status is generated  
+7. Webhook event is triggered  
+8. Response returned to client  
 
-## Payment Statuses
-
-- Pending
-- Processing
-- Success
-- Failed
-- Cancelled
-- Refunded
-
-## Webhook Events
-
-The Payment Gateway sends webhook notifications for important payment events.
-
-- payment.created
-- payment.processing
-- payment.success
-- payment.failed
-- payment.cancelled
-- payment.refunded
+---
 
 ## Architecture
 
-The Payment Gateway System follows a service-oriented architecture designed to provide secure, scalable, and reliable payment processing.
+The system follows a service-oriented architecture.
 
 ### Components
 
-- Client Application
-- Payment Gateway API
-- Authentication Service
-- Payment Processing Service
-- Webhook Service
-- Database
-- Payment Processor
-- Bank / Card Network
+- Client Application  
+- Payment Gateway API  
+- Authentication Service  
+- Payment Processing Service  
+- Payment Processor  
+- Bank / Card Network  
+- Webhook Service  
 
-### Architecture Diagram
+### Responsibilities
 
-```mermaid
-flowchart TD
-    A[Client Application] --> B[Payment Gateway API]
-    B --> C[Authentication Service]
-    B --> D[Payment Processing Service]
-    D --> E[Bank / Card Network]
-    D --> F[Webhook Service]
-    F --> A
-```
+- Client → initiates requests  
+- API → routing + validation  
+- Auth Service → authentication  
+- Processing Service → transaction handling  
+- Processor → external payment execution  
+- Webhook Service → async notifications  
 
-### Architecture Benefits
-
-- Scalable transaction processing
-- Secure communication using HTTPS
-- Real-time payment notifications
-- Centralized authentication and authorization
-- Reliable transaction tracking
+---
 
 ## Security Considerations
 
-Security is a critical aspect of payment processing. The Payment Gateway implements multiple security controls to protect sensitive payment data and ensure secure communication between systems.
-
 ### Security Measures
 
-- All API requests are transmitted over HTTPS.
-- Sensitive payment data is encrypted during transmission.
-- API key-based authentication is used to authorize requests.
-- Access controls are enforced through authentication and authorization mechanisms.
-- Audit logs are maintained for transaction tracking and compliance purposes.
-- Webhook requests can be verified using signature validation.
-- Rate limiting is implemented to prevent abuse and unauthorized access.
-- Payment card information is never stored in plain text.
-- Failed authentication attempts are monitored and logged.
-- Security controls are reviewed and updated periodically.
+- HTTPS encryption for all requests  
+- API key authentication  
+- Rate limiting enabled  
+- Webhook signature verification  
+- Audit logging enabled  
+- No storage of raw card data  
+- Monitoring of failed login attempts  
+- Periodic security reviews  
+
+---
 
 ## Error Handling
 
-The API returns standard HTTP status codes to indicate the success or failure of a request.
+### Status Codes
 
-| Status Code | Description |
-|:-----------:|:-----------:|
-| 200 | Request successful |
-| 201 | Resource created successfully |
-| 400 | Invalid request |
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 201 | Created |
+| 400 | Bad Request |
 | 401 | Unauthorized |
 | 403 | Forbidden |
-| 404 | Resource not found |
-| 409 | Resource conflict |
-| 422 | Validation error |
-| 429 | Too many requests |
-| 500 | Internal server error |
-| 503 | Service unavailable |
+| 404 | Not Found |
+| 409 | Conflict |
+| 422 | Validation Error |
+| 429 | Too Many Requests |
+| 500 | Server Error |
+| 503 | Service Unavailable |
 
-### Error Response Format
+### Error Format
 
 ```json
 {
-  "errorCode": "INVALID_REQUEST",
-  "message": "The request payload is invalid."
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "Invalid request payload"
+  }
 }
 ```
-### Common Error Scenarios
 
-- Missing required request parameters
-- Invalid API credentials
-- Insufficient permissions
-- Unsupported payment method
-- Invalid transaction identifier
-- Rate limit exceeded
-- Duplicate payment request
-- Temporary service outage
-  
+### Common Errors
+
+- Missing parameters  
+- Invalid API key  
+- Payment method not supported  
+- Duplicate request  
+- Rate limit exceeded  
+- Insufficient permissions  
+
+---
+
+## Payment Statuses
+
+- Pending  
+- Processing  
+- Success  
+- Failed  
+- Cancelled  
+- Refunded  
+
+---
+
+## Webhook Events
+
+- payment.created  
+- payment.processing  
+- payment.success  
+- payment.failed  
+- payment.cancelled  
+- payment.refunded  
+
+---
+
 ## FAQ
 
-### How do I obtain an API key?
+### What is an API key?
 
-Create a merchant account and generate an API key from the Payment Gateway Dashboard.
+A secure credential used to authenticate API requests.
 
-### Can I process refunds?
+### Can I refund payments?
 
-Yes. The Payment Gateway API supports full and partial refunds.
+Yes, both full and partial refunds are supported.
 
-### How will I receive payment updates?
+### How do I receive updates?
 
-Payment updates are delivered through webhook notifications.
+Via webhook notifications.
 
-### Which payment methods are supported?
+### Is sandbox available?
 
-The gateway supports credit cards, debit cards, UPI, net banking, digital wallets, and EMI payments.
+Yes, for testing integrations.
 
 ### Is HTTPS required?
 
-Yes. All API requests must be transmitted over HTTPS to ensure secure communication.
+Yes, all requests must use HTTPS.
 
-### Can I test integrations before going live?
-
-Yes. The Payment Gateway provides a sandbox environment for testing and validation.
-
-### What should I do if a payment fails?
-
-Review the API response, verify the request parameters, and refer to the Error Handling section for troubleshooting guidance.
+---
 
 ## Glossary
 
-- API Key – Credential used to authenticate API requests.
-- Authentication – Process of verifying the identity of a user or application.
-- Authorization – Process of granting access to resources after authentication.
-- Webhook – Automated HTTP callback triggered by an event.
-- Merchant – Business or organization using the Payment Gateway.
-- Customer – End user making a payment transaction.
-- Transaction – A payment-related operation processed by the system.
-- Refund – Reversal of a completed payment transaction.
-- Payment Processor – Service responsible for processing payment transactions.
-- Sandbox – Testing environment used for development and integration.
-- HTTPS – Secure protocol used for transmitting data over the internet.
-- JSON – Lightweight data-interchange format used by the APIs.
+- API Key – Authentication credential  
+- Webhook – Event-based callback  
+- Merchant – Payment system user  
+- Transaction – Payment operation  
+- Refund – Reversal of payment  
+- Sandbox – Testing environment  
+- Processor – External payment handler  
+- JSON – Data format  
+- HTTPS – Secure protocol  
+
+---
+
+## Known Limitations
+
+- Requires stable internet connection  
+- Sandbox data not real  
+- Some payment methods region-dependent  
+- Webhook delivery not guaranteed 100%  
+
+---
+
+## Future Enhancements
+
+- AI fraud detection  
+- More payment providers  
+- Subscription billing support  
+- Multi-region failover  
+- Advanced analytics dashboard  
+
+---
+
+## Project Structure
+
+```
+/payment-gateway
+ ├── controllers
+ ├── services
+ ├── routes
+ ├── middleware
+ ├── utils
+ ├── config
+ └── tests
+```
+
+---
