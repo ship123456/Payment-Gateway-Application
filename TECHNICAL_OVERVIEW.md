@@ -36,37 +36,7 @@ The major components include:
 - Database
 - Notification Service
 
-```text
-+--------+
-| Client |
-+--------+
-     |
-     v
-+----------+
-| REST API |
-+----------+
-     |
-     +------------------------+
-     | Authentication Service |
-     +------------------------+
-     |
-     +------------------+
-     | Payment Service  |
-     +------------------+
-     |
-     +------------------+
-     | Refund Service   |
-     +------------------+
-     |
-     +-----------------------+
-     | Notification Service  |
-     +-----------------------+
-     |
-     v
-+----------+
-| Database |
-+----------+
-```
+![Payment Gateway Architecture](images/architecture.png)
 
 ## 3. Technology Stack
 
