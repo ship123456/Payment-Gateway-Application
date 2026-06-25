@@ -139,6 +139,15 @@ POST /payments
 | customer_id | string | Yes | Unique customer identifier |
 | payment_method | string | Yes | Payment method |
 
+### Validation Rules
+
+| Field | Validation |
+|--------|------------|
+| amount | Must be greater than 0. |
+| currency | Supported values: INR, USD, EUR. |
+| customer_id | Must be a valid customer identifier. |
+| payment_method | Supported values: UPI, Credit Card, Debit Card, Net Banking, Wallet. |
+
 ### Success Response
 
 ```json
@@ -167,6 +176,16 @@ POST /payments
 | 201 | Payment created |
 | 400 | Invalid request |
 | 401 | Unauthorized |
+
+### Payment Status Values
+
+| Status | Description |
+|---------|-------------|
+| pending | Payment has been created but is awaiting processing. |
+| processing | Payment is currently being processed. |
+| success | Payment completed successfully. |
+| failed | Payment could not be completed. |
+| cancelled | Payment was cancelled before completion. |
 
 ## Get Payment Status
 
@@ -251,6 +270,13 @@ POST /payments/{payment_id}/refund
 | amount | integer | Yes | Refund amount |
 | reason | string | No | Reason for refund |
 
+### Validation Rules
+
+| Field | Validation |
+|--------|------------|
+| amount | Must be greater than 0 and cannot exceed the original payment amount. |
+| reason | Maximum length of 255 characters. |
+
 ### Success Response
 
 ```json
@@ -278,6 +304,14 @@ POST /payments/{payment_id}/refund
 | 400 | Invalid request |
 | 404 | Payment not found |
 | 401 | Unauthorized |
+
+### Refund Status Values
+
+| Status | Description |
+|---------|-------------|
+| pending | Refund request has been created and is awaiting processing. |
+| processed | Refund has been completed successfully. |
+| failed | Refund could not be processed. |
 
 ## List Payments
 
@@ -650,6 +684,14 @@ To ensure platform stability, API requests are subject to rate limits.
 |------------|-------|
 | Requests Per Minute | 100 |
 | Requests Per Hour | 5000 |
+
+### Response Headers
+
+| Header | Description |
+|--------|-------------|
+| X-RateLimit-Limit | Maximum requests allowed within the current time window. |
+| X-RateLimit-Remaining | Number of requests remaining in the current time window. |
+| X-RateLimit-Reset | Time when the rate limit window resets (Unix timestamp). |
 
 ### Rate Limit Response
 
