@@ -813,3 +813,12 @@ print(response.json())
 - Avoid sending duplicate requests.
 - Cache frequently requested data where possible.
 
+## Troubleshooting
+
+| Issue | Possible Cause | Resolution |
+|--------|----------------|------------|
+| 401 Unauthorized | Invalid or missing API key | Verify the `Authorization` header and API key. |
+| 404 Not Found | Resource does not exist | Verify the resource identifier (for example, `payment_id`). |
+| 429 Too Many Requests | Rate limit exceeded | Wait until the rate limit resets before retrying. |
+| Webhook not received | Endpoint unavailable or signature validation failed | Verify the webhook URL, HTTPS configuration, and signature verification logic. |
+
