@@ -44,6 +44,16 @@ https://api.paymentgateway.com/v1
 - Backward-compatible improvements may be released without changing the API version.
 - Deprecated API versions remain available for a limited period before retirement.
 
+## Deprecation Policy
+
+When an API version or feature is scheduled for retirement, advance notice will be provided to developers.
+
+### Policy
+
+- Deprecated features remain available during the announced deprecation period.
+- Migration guidance is provided before a feature is removed.
+- Developers should migrate to the latest supported API version to receive new features and security updates.
+
 ## Overview
 
 This document provides detailed API information for integrating with the Payment Gateway System.
