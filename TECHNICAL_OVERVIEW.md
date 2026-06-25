@@ -37,18 +37,35 @@ The major components include:
 - Notification Service
 
 ```text
-Client
-   │
-   ▼
-REST API
-   │
-   ├── Authentication
-   ├── Payment Service
-   ├── Refund Service
-   ├── Notification Service
-   │
-   ▼
-Database
++--------+
+| Client |
++--------+
+     |
+     v
++----------+
+| REST API |
++----------+
+     |
+     +------------------------+
+     | Authentication Service |
+     +------------------------+
+     |
+     +------------------+
+     | Payment Service  |
+     +------------------+
+     |
+     +------------------+
+     | Refund Service   |
+     +------------------+
+     |
+     +-----------------------+
+     | Notification Service  |
+     +-----------------------+
+     |
+     v
++----------+
+| Database |
++----------+
 ```
 
 ## 3. Technology Stack
