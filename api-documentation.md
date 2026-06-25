@@ -2,14 +2,13 @@
 
 ## Table of Contents
 
-- [Version Information](#version-information
+- [Version Information](#version-information)
 - [API Versioning](#api-versioning)
 - [Deprecation Policy](#deprecation-policy)  
 - [Overview](#overview)
 - [Base URLs](#base-urls)
-- [Overview](#overview)
-- [Authentication](#authentication)
 - [Sandbox Test Data](#sandbox-test-data)
+- [Authentication](#authentication)
 - [Idempotency](#idempotency)
 - [Headers](#headers)
 - [Create Payment](#create-payment)
