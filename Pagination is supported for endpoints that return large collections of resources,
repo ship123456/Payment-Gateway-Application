@@ -62,7 +62,7 @@ When an API version or feature is scheduled for retirement, advance notice will 
 
 This document provides detailed API information for integrating with the Payment Gateway System.
 
-The APIs allow merchants to create payments, check transaction status, process refunds, and receive real-time payment updates through webhooks.
+The APIs enables merchants to create payments, check transaction status, process refunds, and receive real-time payment updates through webhooks.
 
 All API requests use REST principles, JSON format, HTTPS, and API key-based authentication.
 
@@ -115,7 +115,7 @@ Authorization: Bearer sk_test_123456789
 - Keep API keys confidential.
 - Do not expose API keys in frontend code.
 - Use sandbox keys for testing.
-- Use production keys only for live transactions.
+- Use production API keys only for live transactions.
 
 ## Idempotency
 
@@ -150,10 +150,11 @@ All requests should include the following headers:
 Authorization: Bearer sk_test_123456789
 Content-Type: application/json
 Accept: application/json
+Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
 ```
 ### Request Tracking
 
-Every API response includes a unique request identifier that can be used for debugging and support.
+Every API response includes a unique request identifier (X-Request-ID) that can be used for debugging and support.
 
 | Header | Description |
 |--------|-------------|
@@ -666,11 +667,8 @@ The API uses standard HTTP status codes to indicate request outcomes.
 
 ## Pagination
 
-Pagination is supported for endpoints that return large collections of resources, such as:
+Pagination is supported for endpoints that return large collections of resources.
 
-```http
-GET /payments
-```
 ### Supported Endpoints
 
 - GET /payments
@@ -738,7 +736,7 @@ To ensure platform stability, API requests are subject to rate limits.
 | Requests Per Minute | 100 |
 | Requests Per Hour | 5000 |
 
-### Response Headers
+### Rate Limit Headers
 
 | Header | Description |
 |--------|-------------|
@@ -801,6 +799,7 @@ const response = await fetch(
 const data = await response.json();
 console.log(data);
 ```
+
 ### Python Example
 
 ```python
