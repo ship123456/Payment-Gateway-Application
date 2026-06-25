@@ -617,6 +617,8 @@ return HTTP 200 OK
 
 ## Error Handling
 
+All error responses follow a consistent JSON structure across every API endpoint.
+
 The API uses standard HTTP status codes to indicate request outcomes.
 
 ### Status Codes
@@ -643,6 +645,7 @@ The API uses standard HTTP status codes to indicate request outcomes.
     "code": "INVALID_REQUEST",
     "message": "Invalid request payload"
   }
+  "request_id": "req_123456"
 }
 ```
 
