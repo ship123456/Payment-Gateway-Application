@@ -140,6 +140,7 @@ Detailed implementation and integration information is available in the accompan
 - Toast notifications
 - Responsive dashboard layout
 - Local Storage-based data persistence
+
 ## Tech Stack
 
 ### Frontend
@@ -253,7 +254,7 @@ The application supports the following payment methods:
 - Credit Card
 - Debit Card
 - Net Banking
-- Digital Wallet
+- Wallet
 
 ### Supported Currency
 
@@ -450,7 +451,6 @@ Yes. The application includes Sign In, Sign Up, Forgot Password, and Reset Passw
 - Multiple currency support
 - Payment analytics dashboard
 - Email notifications
-- Dark mode
 - Multi-language support
 - Cloud database integration
 
