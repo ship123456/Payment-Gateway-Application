@@ -35,15 +35,11 @@ The Payment Gateway Dashboard is a React-based web application that simulates a 
 
 The project follows a modular component-based architecture to improve maintainability, scalability, and code reusability while demonstrating frontend development and technical documentation practices.
 
----
-
 ## System Architecture
 
 The application follows a layered architecture that separates presentation, routing, business logic, and client-side data storage.
 
 > **Architecture Diagram:** *(Add the architecture diagram here.)*
-
----
 
 ## Technology Stack
 
@@ -68,8 +64,6 @@ The application follows a layered architecture that separates presentation, rout
 - GitHub
 - Visual Studio Code
 
----
-
 ## Project Structure
 
 ```text
@@ -77,16 +71,18 @@ src/
 ├── assets/
 ├── components/
 ├── context/
+├── data/
+├── hooks/
+├── layouts/
 ├── pages/
 ├── services/
+├── styles/
 ├── App.js
-├── index.js
-└── routes.js
+├── index.css
+└── index.js
 ```
 
-The project structure separates reusable components, application pages, shared services, assets, and routing configuration to improve maintainability.
-
----
+The project structure separates reusable components, layouts, custom hooks, shared services, application pages, assets, and application state to improve maintainability, scalability, and code organization.
 
 ## Application Modules
 
@@ -102,8 +98,6 @@ The application consists of the following functional modules:
 - Settings
 
 Each module is designed to operate independently while sharing common routing, navigation, and application state.
-
----
 
 ## Routing
 
@@ -123,9 +117,7 @@ Typical application routes include:
 - /profile
 - /settings
 
-Protected routes ensure authenticated users can access secured application pages.
-
----
+Application routing restricts navigation to authenticated areas through simulated authentication for demonstration purposes.
 
 ## Component Architecture
 
@@ -144,8 +136,6 @@ Major components include:
 
 This approach minimizes code duplication and improves maintainability.
 
----
-
 ## Reusable Components
 
 Reusable UI components provide a consistent user experience throughout the application.
@@ -163,8 +153,6 @@ Examples include:
 
 These components are shared across multiple application modules.
 
----
-
 ## State Management
 
 The application uses:
@@ -175,8 +163,6 @@ The application uses:
 
 Shared application data is managed through Context API, while individual component interactions use local state.
 
----
-
 ## Data Flow
 
 The application follows a unidirectional data flow.
@@ -185,9 +171,19 @@ User actions initiate requests, which are validated before updating the applicat
 
 General flow:
 
-User Action → Form Validation → Context / Component State → Local Storage → User Interface Update
-
----
+```text
+User Action
+      ↓
+Form Validation
+      ↓
+Component / Context State
+      ↓
+Local Storage
+      ↓
+UI Refresh
+      ↓
+Notification
+```
 
 ## Application Workflow
 
@@ -203,8 +199,6 @@ The overall application workflow is as follows:
 8. Notifications are displayed.
 9. Users can manage profiles, settings, and support requests.
 
----
-
 ## Local Storage
 
 The application stores client-side data using browser Local Storage.
@@ -216,10 +210,9 @@ Stored information includes:
 - Application settings
 - Notification preferences
 - Webhook configuration
+- Support tickets
 
 Local Storage enables data persistence between browser sessions without requiring a backend.
-
----
 
 ## Form Validation
 
@@ -236,8 +229,6 @@ Validation includes:
 
 Validation feedback is displayed immediately to users before submission.
 
----
-
 ## Error Handling
 
 The application handles common user errors through client-side validation and informative feedback.
@@ -252,8 +243,6 @@ Examples include:
 
 Appropriate error messages guide users in resolving issues.
 
----
-
 ## Notification System
 
 Notifications provide immediate feedback for important user actions.
@@ -266,8 +255,6 @@ Notification types include:
 - Information
 
 React Toastify is used to display notification messages throughout the application.
-
----
 
 ## Security Considerations
 
@@ -283,8 +270,6 @@ These include:
 
 Since this is a frontend demonstration project, authentication and data persistence are simulated.
 
----
-
 ## Performance Optimizations
 
 Performance is improved through several implementation practices.
@@ -297,8 +282,6 @@ These include:
 - Reduced component duplication
 - Optimized rendering
 
----
-
 ## Deployment Overview
 
 The application is designed for deployment as a static React application.
@@ -307,6 +290,11 @@ Deployment process:
 
 1. Install dependencies.
 2. Create a production build.
+
+```bash
+npm run build
+```
+
 3. Deploy the build files to a static hosting platform.
 
 Suitable deployment platforms include:
@@ -314,8 +302,6 @@ Suitable deployment platforms include:
 - GitHub Pages
 - Netlify
 - Vercel
-
----
 
 ## Limitations
 
@@ -326,8 +312,6 @@ Current project limitations include:
 - Simulated authentication
 - No real payment processing
 - No database integration
-
----
 
 ## Future Improvements
 
