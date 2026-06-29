@@ -385,12 +385,9 @@ Webhook events notify external systems whenever the status of a payment changes.
 
 | Event | Description |
 |------|-------------|
-| payment.created | Triggered when a payment is created. |
-| payment.processing | Triggered when payment processing begins. |
 | payment.success | Triggered after a successful payment. |
 | payment.failed | Triggered when a payment fails. |
 | payment.cancelled | Triggered when a payment is cancelled. |
-| payment.refunded | Triggered after a successful refund. |
 
 ## FAQ
 
