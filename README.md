@@ -376,8 +376,6 @@ The application supports the following payment statuses:
 | Processing | Payment is currently being processed. |
 | Success | Payment completed successfully. |
 | Failed | Payment could not be completed. |
-| Cancelled | Payment was cancelled before completion. |
-| Refunded | Payment has been refunded to the customer. |
 
 ## Webhook Events
 
