@@ -89,3 +89,103 @@ Detailed implementation and integration information is available in the accompan
 | INSTALLATION_GUIDE.md | Project setup and installation instructions |
 | TROUBLESHOOTING_GUIDE.md | Common issues and recommended solutions |
 | RELEASE_NOTES.md | Version history and feature updates |
+
+## Features
+
+- Dashboard with payment analytics and recent transactions
+- Create and manage payment requests
+- Payment History with search, filters, and CSV export
+- View detailed payment information
+- Webhook configuration and delivery monitoring
+- Webhook event logs with payload details
+- Support ticket submission and tracking
+- FAQ section for common questions
+- User profile management
+- Application settings management
+- Authentication (Sign In, Sign Up, Forgot Password, Reset Password)
+- Local storage-based data persistence
+- Responsive dashboard layout
+- Clean and intuitive user interface
+
+## Tech Stack
+
+### Frontend
+
+- React
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### Libraries
+
+- React Toastify
+- React Icons
+- Recharts
+
+### Development Tools
+
+- npm
+- Visual Studio Code
+- Git
+- GitHub
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- Node.js (v18 or later)
+- npm
+- Git
+- A modern web browser (Chrome, Edge, Firefox, or Safari)
+
+## Environment Support
+
+The application supports the following environments:
+
+| Environment | Purpose |
+|------------|---------|
+| Development | Local development and testing |
+| Production | Deployment-ready build |
+
+## Assumptions
+
+This project assumes that:
+
+- Node.js and npm are installed.
+- JavaScript is enabled in the browser.
+- Local Storage is available.
+- The application runs in a modern browser.
+- Internet access is available for installing project dependencies.
+
+## Installation
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/your-username/payment-gateway.git
+```
+
+2. Navigate to the project directory.
+
+```bash
+cd payment-gateway
+```
+
+3. Install dependencies.
+
+```bash
+npm install
+```
+
+4. Start the development server.
+
+```bash
+npm start
+```
+
+5. Open the application in your browser.
+
+```
+http://localhost:3000
+```
