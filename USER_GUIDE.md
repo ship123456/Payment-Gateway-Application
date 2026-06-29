@@ -129,7 +129,6 @@ The Dashboard displays:
 - Payment summary cards
 - Monthly payment analytics
 - Recent transactions
-- Quick navigation to application modules
 - Notification center
 - Sidebar navigation
 
