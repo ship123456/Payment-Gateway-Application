@@ -8,216 +8,440 @@
 
 ## Table of Contents
 
-1. Introduction
-2. System Requirements
-3. Getting Started
-4. Logging In
-5. Dashboard Overview
-6. Making a Payment
-7. Viewing Payment History
-8. Refunds
-9. Notifications
-10. Account Settings
-11. Troubleshooting
-12. Frequently Asked Questions
-13. Contact Support
+- [Introduction](#1-introduction)
+- [System Requirements](#2-system-requirements)
+- [Getting Started](#3-getting-started)
+- [Authentication](#4-authentication)
+- [Dashboard](#5-dashboard)
+- [New Payment](#6-new-payment)
+- [Payment History](#7-payment-history)
+- [Webhooks](#8-webhooks)
+- [Support](#9-support)
+- [Profile](#10-profile)
+- [Settings](#11-settings)
+- [Logout](#12-logout)
+- [Troubleshooting](#13-troubleshooting)
+- [Frequently Asked Questions](#14-frequently-asked-questions)
 
 ## 1. Introduction
 
-The Payment Gateway is a secure online payment platform that enables users to make, track, and manage digital payments through a simple and user-friendly interface.
+The Payment Gateway Dashboard is a web-based application designed to simplify payment management through a centralized and user-friendly interface. Users can create new payments, monitor transaction history, manage webhook configurations, submit support requests, and customize application settings from a single dashboard.
 
-The platform supports multiple payment methods, including credit cards, debit cards, UPI, net banking, and digital wallets. Users can view transaction history, monitor payment status, request refunds, and receive notifications for important payment events.
-
-This guide provides step-by-step instructions for using the platform, helping users complete common tasks and troubleshoot basic issues.
+This guide explains how to use every feature of the application, providing step-by-step instructions, screenshots, and helpful notes to assist users in completing common tasks.
 
 ## 2. System Requirements
 
-Before using the Payment Gateway, ensure that your device meets the following requirements:
+Before using the application, ensure that your system meets the following requirements.
 
-- A stable internet connection.
-- A modern web browser such as Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari.
-- JavaScript and cookies enabled in the browser.
-- A valid user account with the necessary access permissions.
+### Hardware Requirements
+
+- Desktop or laptop computer
+- Minimum 4 GB RAM
+- Internet connection
+
+### Software Requirements
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+### Browser Requirements
+
+- JavaScript enabled
+- Cookies enabled
+- Local Storage enabled
 
 ## 3. Getting Started
 
-Follow these steps to begin using the Payment Gateway:
+Follow these steps to begin using the application.
 
 1. Open your preferred web browser.
-2. Navigate to the Payment Gateway login page.
-3. Enter your registered email address and password.
-4. Click **Log In** to access your account.
-5. After signing in, you will be directed to the dashboard, where you can manage payments, view transaction history, request refunds, and update your account settings.
+2. Launch the Payment Gateway application.
+3. Sign in using your account credentials.
+4. After successful authentication, the Dashboard is displayed.
+5. Use the navigation menu to access different application modules.
 
-> **Note:** If you do not have an account, contact your system administrator or support team to request access.
+> **Note:** A valid user account is required to access the application.
 
-## 4. Logging In
+## 4. Authentication
 
-To access the Payment Gateway, follow these steps:
+The application provides a complete authentication workflow for secure user access.
 
-1. Open the Payment Gateway login page.
+### Sign In
+
+To access the application:
+
+1. Open the Sign In page.
 2. Enter your registered email address.
 3. Enter your password.
-4. Click **Log In**.
+4. Click **Sign In**.
+5. You will be redirected to the Dashboard after successful authentication.
 
-If the entered credentials are correct, you will be redirected to the dashboard.
+> **Screenshot:** Sign In Page
 
-![Login Page](images/login.png)
+### Sign Up
+
+To create a new account:
+
+1. Open the Sign Up page.
+2. Enter your full name.
+3. Enter your email address.
+4. Create a password.
+5. Confirm your password.
+6. Click **Sign Up**.
+
+> **Screenshot:** Sign Up Page
 
 ### Forgot Password
 
 If you forget your password:
 
-1. Click **Forgot Password?** on the login page.
+1. Click **Forgot Password**.
 2. Enter your registered email address.
-3. Follow the instructions sent to your email to reset your password.
-4. Log in using your new password.
+3. Click **Submit**.
+4. Follow the instructions displayed to reset your password.
 
-![Forgot Password](images/forgot-password.png)
+> **Screenshot:** Forgot Password Page
 
-## 5. Dashboard Overview
+### Reset Password
 
-After logging in, you will be taken to the dashboard, which provides quick access to the platform's main features.
+To create a new password:
 
-The dashboard allows you to:
+1. Open the Reset Password page.
+2. Enter your new password.
+3. Confirm the new password.
+4. Click **Reset Password**.
+5. Return to the Sign In page using your new credentials.
 
-- View your account summary.
-- Create new payments.
-- Monitor payment status.
-- Access transaction history.
-- Request refunds for eligible transactions.
-- View notifications and recent activity.
-- Manage your account settings.
+> **Screenshot:** Reset Password Page
 
-![Dashboard](images/dashboard.png)
+## 5. Dashboard
 
-## 6. Making a Payment
+The Dashboard provides a centralized overview of payment activity and quick access to application features.
 
-Follow these steps to create a new payment:
+### Dashboard Overview
 
-1. From the dashboard, click **New Payment**.
-2. Enter the recipient details.
-3. Enter the payment amount.
-4. Select your preferred payment method.
-5. Review the payment details.
-6. Click **Pay Now** to submit the payment.
+The Dashboard displays:
 
-After the payment is processed, a confirmation message and transaction ID will be displayed. You can also view the transaction in your payment history.
+- Payment summary cards
+- Monthly payment analytics
+- Recent transactions
+- Quick navigation to application modules
 
-![New Payment](images/new-payment.png)
+> **Screenshot:** Dashboard
 
-![Payment Success](images/payment-success.png)
+### Notification Center
 
-## 7. Viewing Payment History
+Click the notification bell in the header to view recent application notifications and payment-related updates.
 
-The Payment History page allows you to view all your previous transactions.
+> **Screenshot:** Notification Panel
 
-To view your payment history:
+## 6. New Payment
 
-1. Navigate to **Payment History** from the dashboard.
-2. Browse the list of completed, pending, or failed transactions.
-3. Select a transaction to view its details, including the transaction ID, payment method, amount, date, and status.
+The New Payment page allows users to create a payment request.
 
-You can use the available search and filter options to quickly locate specific transactions.
+### Creating a Payment
+
+1. Open **New Payment** from the sidebar.
+2. Enter the customer name.
+3. Enter the email address.
+4. Enter the phone number.
+5. Enter the payment amount.
+6. Select the currency.
+7. Select a payment method.
+8. Enter the Order ID.
+9. Enter a description.
+10. Click **Create Payment**.
+
+### Validation
+
+The application validates user input before creating a payment.
+
+Validation includes:
+
+- Customer Name is required.
+- Email address must be valid.
+- Phone number is required.
+- Amount must be greater than zero.
+- Currency must be selected.
+- Payment Method must be selected.
+- Order ID is required.
+
+### Payment Success
+
+After a successful submission:
+
+- A success message is displayed.
+- A unique Payment ID is generated.
+- The payment is added to Payment History.
+- A webhook event is generated automatically.
+
+> **Screenshot:** Payment Success
+
+## 7. Payment History
+
+The Payment History page displays all previously created payment transactions in a tabular format.
 
 ![Payment History](images/payment-history.png)
 
-## 8. Refunds
+### Searching Payments
 
-Eligible transactions can be refunded directly from the Payment Gateway.
+1. Open **Payment History**.
+2. Enter a Payment ID, Customer Name, or Order ID in the search box.
+3. Matching transactions are displayed automatically.
 
-To request a refund:
+### Filtering Payments
 
-1. Open **Payment History** from the dashboard.
-2. Select the transaction you want to refund.
-3. Click **Request Refund**.
-4. Confirm the refund request.
+1. Click the **Status** filter.
+2. Select a payment status.
+3. The table updates to display matching transactions.
 
-After the request is submitted, the refund status can be tracked from the transaction details. Processing time may vary depending on the payment method and financial institution.
+### Viewing Payment Details
 
-![Refund Request](images/refund-request.png)
+1. Click **View** for any payment.
+2. A modal window displays complete payment information.
 
-## 9. Notifications
+The details include:
 
-The Payment Gateway provides notifications to keep you informed about important account and payment activities.
+- Payment ID
+- Customer Name
+- Email Address
+- Phone Number
+- Amount
+- Currency
+- Payment Method
+- Payment Status
+- Order ID
+- Description
+- Payment Date
 
-You may receive notifications for:
+![Payment Details](images/payment-details.png)
 
-- Successful payments
-- Failed or declined payments
-- Pending transactions
-- Refund status updates
-- Account-related activities
-- Security alerts
+### Pagination
 
-Notifications may be available within the application and, depending on your account settings, may also be sent via email.
+Use the **Previous**, **Next**, or page number buttons to navigate through multiple pages of payment records.
 
-## 10. Account Settings
+### Exporting Payment History
 
-The **Account Settings** page allows you to manage your personal account information and preferences.
+1. Click **Export CSV**.
+2. The application downloads the payment history as a CSV file.
+3. Open the file using any spreadsheet application.
 
-From this section, you can:
+## 8. Webhooks
 
-- Update your profile information.
-- Change your account password.
-- Manage notification preferences.
-- Review your account details.
-- Update security settings, where applicable.
+The Webhooks page allows users to configure webhook settings and monitor webhook delivery logs.
 
-Remember to save your changes before leaving the page.
+![Webhooks](images/webhooks.png)
 
-![Account Settings](images/account-settings.png)
+### Webhook Configuration
 
-## 11. Troubleshooting
+The configuration section displays:
 
-The following table lists common issues and their possible solutions.
+- Webhook URL
+- Secret Key
+- Webhook Status
 
-| Issue | Possible Solution |
-|-------|-------------------|
-| Unable to log in | Verify your email address and password. Reset your password if necessary. |
-| Payment failed | Check your payment details, account balance, and internet connection before trying again. |
-| Refund not received | Refund processing times vary depending on the payment method and financial institution. |
-| Page not loading | Refresh the page, clear your browser cache, or try another supported browser. |
-| No notifications received | Verify your notification preferences and ensure your email address is correct. |
+### Enable / Disable Webhooks
 
-## 12. Frequently Asked Questions
+Use the **Enable Webhooks** toggle to enable or disable webhook event generation.
 
-### How can I reset my password?
+### Copy Webhook URL
 
-Click **Forgot Password?** on the login page and follow the instructions sent to your registered email address.
+Click **Copy URL** to copy the configured webhook endpoint.
 
-### Which payment methods are supported?
+### Regenerate Secret
 
-The platform supports credit cards, debit cards, UPI, net banking, and digital wallets.
+Click **Regenerate Secret** to generate a new webhook secret key.
 
-### How can I check the status of a payment?
+### Searching Webhooks
 
-You can view the current status of any transaction from the **Payment History** page.
+Enter a Payment ID or Event Name in the search box to locate specific webhook records.
 
-### How long do refunds take?
+### Filtering Webhooks
 
-Refund processing times vary depending on the payment method and the financial institution.
+Use the Status filter to display:
 
-### Who should I contact if I need help?
+- Delivered
+- Failed
+- All
 
-Contact your system administrator or the support team for assistance.
+### Viewing Webhook Details
 
-## 13. Contact Support
+Click **View** to open the webhook details modal.
 
-If you experience issues that cannot be resolved using this guide, please contact the support team.
+The modal displays:
 
-**Support Channels**
+- Event Name
+- Payment ID
+- Endpoint
+- Response
+- Payload
 
-- **Email:** support@example.com
-- **Phone:** +1 (123) 456-7890
-- **Business Hours:** Monday to Friday, 9:00 AM – 6:00 PM
+![Webhook Details](images/webhook-details.png)
 
-When contacting support, include the following information to help resolve your issue more quickly:
+### Pagination
 
-- Transaction ID (if applicable)
-- Date and time of the issue
-- Error message or screenshot (if available)
-- A brief description of the problem
+Use the pagination controls at the bottom of the table to navigate through webhook records.
 
+## 9. Support
 
+The Support module allows users to submit support requests and monitor submitted tickets.
 
+![Support](images/support.png)
+
+### Contact Support
+
+To submit a support request:
+
+1. Open **Contact Support**.
+2. Enter the Subject.
+3. Select a Category.
+4. Enter your Message.
+5. Attach a file (optional).
+6. Click **Submit**.
+
+### Validation
+
+The Contact Support form validates:
+
+- Subject
+- Category
+- Message
+
+### Uploading Attachments
+
+Click **Choose File** to attach a supporting document or image before submitting the request.
+
+### My Support Tickets
+
+The **My Support Tickets** page displays all submitted support requests.
+
+### Searching Support Tickets
+
+Use the search box to locate tickets by Ticket ID or Subject.
+
+### Filtering Support Tickets
+
+Use the Status filter to display matching tickets.
+
+### Viewing Ticket Details
+
+Click **View** to display the complete ticket information in a modal window.
+
+The modal includes:
+
+- Ticket ID
+- Subject
+- Category
+- Status
+- Priority
+- Date
+- Description
+
+![Support Ticket Details](images/support-ticket.png)
+
+## 10. Profile
+
+The Profile page allows users to view and update their personal information.
+
+![Profile](images/profile.png)
+
+### Viewing Profile
+
+The page displays:
+
+- Full Name
+- Email Address
+- Phone Number
+- Company Name
+
+### Updating Profile Information
+
+1. Edit the required fields.
+2. Click **Save Changes**.
+
+### Validation
+
+The application validates:
+
+- Full Name
+- Email Address
+- Phone Number
+
+## 11. Settings
+
+The Settings page allows users to customize account preferences.
+
+![Settings](images/settings.png)
+
+### Personal Information
+
+Update your personal details whenever required.
+
+### Billing Information
+
+Manage billing-related information associated with your account.
+
+### Change Password
+
+To change your password:
+
+1. Enter the Current Password.
+2. Enter the New Password.
+3. Confirm the New Password.
+4. Click **Save Changes**.
+
+### Notification Preferences
+
+Enable or disable application notifications using the available checkboxes.
+
+### Light & Dark Theme
+
+Choose between **Light** and **Dark** themes.
+
+Changes are applied immediately after selection.
+
+## 12. Logout
+
+To securely exit the application:
+
+1. Click **Logout** from the sidebar.
+2. The application signs you out and redirects you to the Sign In page.
+
+## 13. Troubleshooting
+
+| Issue | Solution |
+|--------|----------|
+| Unable to sign in | Verify your email address and password. |
+| Payment creation failed | Ensure all required fields are completed correctly. |
+| Search returns no results | Verify the search keyword or clear active filters. |
+| Webhook logs are empty | Ensure webhooks are enabled before creating payments. |
+| File upload failed | Verify the selected file and try again. |
+| Theme not changing | Refresh the application and try again. |
+
+## 14. Frequently Asked Questions
+
+### Can I edit a payment after creating it?
+
+No. Existing payment records are read-only.
+
+### Can I export payment history?
+
+Yes. Use the **Export CSV** button on the Payment History page.
+
+### How do I enable webhooks?
+
+Open **Webhooks** and enable the **Enable Webhooks** toggle.
+
+### Can I attach files to support requests?
+
+Yes. The Contact Support form supports file attachments.
+
+### How do I switch between Light and Dark themes?
+
+Open **Settings** and select your preferred theme.
+
+### Where are my support requests stored?
+
+Submitted requests are available in **My Support Tickets**.
