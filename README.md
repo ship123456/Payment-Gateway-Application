@@ -80,35 +80,66 @@ Detailed implementation and integration information is available in the accompan
 
 ## Features
 
+### Dashboard
+
+- Payment summary
+- Monthly payment analytics
+- Recent transactions
+- Notification center
+
 ### Payment Management
 
-- Create payments
+- Create new payments
+- Payment success confirmation
 - Payment History
 - Payment Details
+- Search and filter transactions
+- Pagination
+- Export payment history as CSV
 
 ### Webhooks
 
 - Configure webhook endpoint
-- Monitor webhook deliveries
+- Enable or disable webhooks
+- Copy webhook URL
+- Regenerate secret key
+- View webhook logs
+- Search and filter webhook events
+- View webhook payload details
 
 ### Support
 
-- Contact Support
-- Support Tickets
-- FAQ
+- Contact Support form
+- File attachment support
+- Form validation
+- My Support Tickets
+- Search and filter support tickets
+- View support ticket details
+- Frequently Asked Questions (FAQ)
 
 ### User Management
 
-- Authentication
-- Profile
-- Settings
+- Sign In
+- Sign Up
+- Forgot Password
+- Reset Password
+- Profile Management
+- Logout
+
+### Settings
+
+- Personal information
+- Billing information
+- Change password
+- Notification preferences
+- Light and Dark theme
 
 ### Additional Features
 
-- CSV Export
-- Responsive Layout
-- Local Storage
-
+- Client-side form validation
+- Toast notifications
+- Responsive dashboard layout
+- Local Storage-based data persistence
 ## Tech Stack
 
 ### Frontend
