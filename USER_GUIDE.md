@@ -25,9 +25,11 @@
 
 ## 1. Introduction
 
-The Payment Gateway Dashboard is a web-based application designed to simplify payment management through a centralized and user-friendly interface. Users can create new payments, monitor transaction history, manage webhook configurations, submit support requests, and customize application settings from a single dashboard.
+The Payment Gateway Dashboard is a web-based application designed to simplify payment management through a centralized and user-friendly interface. The application enables users to create and manage payments, monitor transaction history, configure webhook settings, submit support requests, and manage account information from a single dashboard.
 
-This guide explains how to use every feature of the application, providing step-by-step instructions, screenshots, and helpful notes to assist users in completing common tasks.
+In addition to payment management, the application provides features such as payment history search and filtering, CSV export, webhook monitoring, support ticket management, profile management, notification preferences, and Light/Dark theme customization.
+
+This User Guide provides step-by-step instructions for using each feature of the application, helping users perform common tasks efficiently and navigate the dashboard with ease.
 
 ## 2. System Requirements
 
