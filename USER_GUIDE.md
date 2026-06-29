@@ -181,8 +181,6 @@ After a successful submission:
 - The payment is added to Payment History.
 - A webhook event is generated if webhooks are enabled.
 
-The generated payment is automatically available in **Payment History** and a corresponding webhook event is created if webhooks are enabled.
-
 > **Screenshot:** Payment Success
 
 ## 7. Payment History
@@ -357,10 +355,10 @@ The Profile page allows users to view and update their personal information.
 
 The page displays:
 
-- Full Name is required.
-- Email Address must be valid.
-- Phone Number is required.
-- Company Name is required.
+- Full Name
+- Email Address
+- Phone Number
+- Company Name
 
 ### Updating Profile Information
 
@@ -371,9 +369,10 @@ The page displays:
 
 The application validates:
 
-- Full Name
-- Email Address
-- Phone Number
+- Full Name is required.
+- Email Address must be valid.
+- Phone Number is required.
+- Company Name is required.
 
 ## 11. Settings
 
