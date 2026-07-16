@@ -1,456 +1,448 @@
-# Payment Gateway
+# PayFlow User Guide
 
-# User Guide
+This guide explains how to use the PayFlow application. It covers user authentication, payment management, profile management, customer support, and frequently asked questions.
 
-**Version:** 1.0
+---
 
-**Last Updated:** June 2026
+# Table of Contents
 
-## Table of Contents
+- [Login](#login)
+- [Sign Up](#sign-up)
+- [Dashboard](#dashboard)
+- [Notifications](#notifications)
+- [Create a New Payment](#create-a-new-payment)
+- [Payment Success](#payment-success)
+- [Payment History](#payment-history)
+- [Payment Details](#payment-details)
+- [Profile](#profile)
+- [Change Password](#change-password)
+- [Contact Support](#contact-support)
+- [Support Tickets](#support-tickets)
+- [Support Ticket Details](#support-ticket-details)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-- [Introduction](#1-introduction)
-- [System Requirements](#2-system-requirements)
-- [Getting Started](#3-getting-started)
-- [Authentication](#4-authentication)
-- [Dashboard](#5-dashboard)
-- [New Payment](#6-new-payment)
-- [Payment History](#7-payment-history)
-- [Webhooks](#8-webhooks)
-- [Support](#9-support)
-- [Profile](#10-profile)
-- [Settings](#11-settings)
-- [Logout](#12-logout)
-- [Troubleshooting](#13-troubleshooting)
-- [Frequently Asked Questions](#14-frequently-asked-questions)
+---
 
-## 1. Introduction
+# Login
 
-The Payment Gateway Dashboard is a web-based application designed to simplify payment management through a centralized and user-friendly interface. The application enables users to create and manage payments, monitor transaction history, configure webhook settings, submit support requests, and manage account information from a single dashboard.
+## Purpose
 
-In addition to payment management, the application provides features such as payment history search and filtering, CSV export, webhook monitoring, support ticket management, profile management, notification preferences, and Light/Dark theme customization.
+The Login page allows registered users to securely access the PayFlow application.
 
-This User Guide provides step-by-step instructions for using each feature of the application, helping users perform common tasks efficiently and navigate the dashboard with ease.
+## Fields
 
-## 2. System Requirements
+| Field | Description |
+|--------|-------------|
+| Email | Registered email address |
+| Password | Account password |
 
-Before using the application, ensure that your system meets the following requirements.
+## Buttons
 
-### Hardware Requirements
+| Button | Description |
+|----------|-------------|
+| Login | Authenticates the user and opens the Dashboard. |
+| Sign Up | Opens the registration page for new users. |
 
-- Desktop or laptop computer
-- Minimum 4 GB RAM
-- Internet connection
+## Steps
 
-### Software Requirements
+1. Enter your registered email address.
+2. Enter your password.
+3. Click **Login**.
 
-- Google Chrome
-- Microsoft Edge
-- Mozilla Firefox
-- Safari
+## Result
 
-### Browser Requirements
+If the credentials are valid, the Dashboard page is displayed.
 
-- JavaScript enabled
-- Cookies enabled
-- Local Storage enabled
+![Login](images/login.png)
 
-## 3. Getting Started
+---
 
-Follow these steps to begin using the application.
+# Sign Up
 
-1. Open your preferred web browser.
-2. Launch the Payment Gateway application.
-3. Sign in using your account credentials.
-4. After successful authentication, the Dashboard is displayed.
-5. Use the navigation menu to access different application modules.
+## Purpose
 
-> **Note:** A valid user account is required to access the application.
+The Sign Up page allows new users to create an account.
 
-## 4. Authentication
+## Fields
 
-The application provides a complete authentication workflow for secure user access.
+| Field | Description |
+|--------|-------------|
+| Full Name | User's name |
+| Email | Email address |
+| Password | Account password |
+| Confirm Password | Account password |
 
-### Sign In
+## Buttons
 
-To access the application:
+| Button | Description |
+|----------|-------------|
+| Create Account | Creates a new account. |
+| Back to Login | Returns to the Login page. |
 
-1. Open the Sign In page.
-2. Enter your registered email address.
-3. Enter your password.
-4. Click **Sign In**.
-5. You will be redirected to the Dashboard after successful authentication.
+## Steps
 
-> **Screenshot:** Sign In Page
+1. Enter all required information.
+2. Click **Create Account**.
+3. Return to Login.
+4. Sign in using the newly created account.
 
-### Sign Up
+## Result
 
-To create a new account:
+A new account is created successfully.
 
-1. Open the Sign Up page.
-2. Enter your full name.
-3. Enter your email address.
-4. Create a password.
-5. Confirm your password.
-6. Click **Sign Up**.
+![Sign Up](images/signup.png)
 
-> **Screenshot:** Sign Up Page
+---
 
-### Forgot Password
+# Dashboard
 
-If you forget your password:
+## Purpose
 
-1. Click **Forgot Password**.
-2. Enter your registered email address.
-3. Click **Submit**.
-4. Follow the instructions displayed to reset your password.
+The Dashboard provides an overview of payment activity.
 
-> **Screenshot:** Forgot Password Page
+## Available Information
 
-### Reset Password
+- Total Payments
+- Successful Payments
+- Pending Payments
+- Failed Payments
+- Monthly Payment Chart
+- Recent Payments
+- Notifications
 
-To create a new password:
+## Actions
 
-1. Open the Reset Password page.
-2. Enter your new password.
-3. Confirm the new password.
-4. Click **Reset Password**.
-5. Return to the Sign In page using your new credentials.
+- View recent payment details.
+- Navigate to Payment History.
+- Access other application modules.
 
-> **Screenshot:** Reset Password Page
+## Result
 
-## 5. Dashboard
+Users can monitor payment activity from a single location.
 
-The Dashboard provides a centralized overview of payment activity and quick access to application features.
+![Dashboard](images/dashboard.png)
 
-### Dashboard Overview
+---
 
-The Dashboard displays:
+# Notifications
 
-- Payment summary cards
-- Monthly payment analytics
-- Recent transactions
-- Notification center
-- Sidebar navigation
+## Purpose
 
-> **Screenshot:** Dashboard
+The notification panel displays recent payment and application updates.
 
-### Notification Center
+## Steps
 
-Click the notification bell in the header to view recent application notifications and payment-related updates.
+1. Click the notification bell.
+2. Review the available notifications.
+3. Close the notification panel.
 
-> **Screenshot:** Notification Panel
+![Notifications](images/notification.png)
 
-## 6. New Payment
+---
 
-The New Payment page allows users to create a payment request.
+# Create a New Payment
 
-### Creating a Payment
+## Purpose
 
-1. Open **New Payment** from the sidebar.
-2. Enter the customer name.
-3. Enter the email address.
-4. Enter the phone number.
-5. Enter the payment amount.
-6. Select the currency.
-7. Select a payment method.
-8. Enter the Order ID.
-9. Enter a description.
-10. Click **Create Payment**.
+Allows users to create a payment transaction.
 
-### Validation
+## Fields
 
-The application validates user input before creating a payment.
+Document every field available in your form here.
 
-Validation includes:
+Example:
 
-- Customer Name is required.
-- Email address must be valid.
-- Phone number is required.
-- Amount must be greater than zero.
-- Currency must be selected.
-- Payment Method must be selected.
-- Order ID is required.
+| Field | Description |
+|--------|-------------|
+| Customer Name | Name of the customer |
+| Payment Id | payment Id of the transaction |
+| Customer Email | Email address |
+| Phone Number | Customer phone number |
+| Amount | Payment amount |
+| Currency | Payment currency |
+| Payment Method | Selected payment method |
+| Description | Payment description |
 
-### Payment Success
+## Buttons
 
-After a successful submission:
+| Button | Description |
+|----------|-------------|
+| Create Payment | Creates a new payment. |
+| Cancel | Returns to Dashboard. |
 
-- A success message is displayed.
-- A unique Payment ID is generated.
-- The payment is added to Payment History.
-- A webhook event is generated if webhooks are enabled.
+## Steps
 
-> **Screenshot:** Payment Success
+1. Complete all required fields.
+2. Verify the Payment Summary.
+3. Click **Create Payment**.
 
-## 7. Payment History
+## Validation
 
-The Payment History page displays all previously created payment transactions in a tabular format.
+Describe every validation implemented.
 
-![Payment History](images/payment-history.png)
+## Result
 
-### Searching Payments
+The payment is created and the application redirects to the Payment Success page.
 
-1. Open **Payment History**.
-2. Enter a Payment ID, Customer Name, or Order ID in the search box.
-3. Matching transactions are displayed automatically.
+![New Payment](images/newPayment.png)
 
-### Filtering Payments
+---
 
-1. Click the **Status** filter.
-2. Select a payment status.
-3. The table updates to display matching transactions.
+# Payment Success
 
-### Viewing Payment Details
+## Purpose
 
-1. Click **View** for any payment.
-2. A modal window displays complete payment information.
+Confirms successful payment creation.
 
-The details include:
+## Information Displayed
 
 - Payment ID
-- Customer Name
-- Email Address
-- Phone Number
+- Customer
+- Amount
+- Currency
+- Status
+- Date
+
+## Buttons
+
+- Create New Transaction
+- View Payments
+
+## Result
+
+Users can immediately create another payment or review payment history.
+
+![Payment Success](images/paymentSuccess.png)
+
+---
+
+# Payment History
+
+## Purpose
+
+Displays all created payments.
+
+## Features
+
+- Search
+- Status Filter
+- Export CSV
+- Pagination
+- Payment Details
+
+## Table Columns
+
+- Payment ID
+- Customer
+- Amount
+- Currency
+- Status
+- Date
+- Actions
+
+## Result
+
+Users can efficiently manage and review payment records.
+
+![Payment History](images/paymentHistory.png)
+
+---
+
+# Payment Details
+
+## Purpose
+
+Displays complete information about a selected payment.
+
+## Information Displayed
+
+- Payment ID
+- Customer Details
 - Amount
 - Currency
 - Payment Method
-- Payment Status
-- Order ID
+- Status
 - Description
-- Payment Date
+- Date
 
-![Payment Details](images/payment-details.png)
+## Buttons
 
-### Pagination
+- Close
+- Delete
 
-Use the **Previous**, **Next**, or page number buttons to navigate through multiple pages of payment records.
+## Result
 
-### Exporting Payment History
+Provides complete payment information without leaving the Payment History page.
 
-1. Click **Export CSV**.
-2. The application downloads the payment history as a CSV file.
-3. Open the file using any spreadsheet application.
+![Payment Details](images/paymentDetailsModal.png)
 
-## 8. Webhooks
+---
 
-The Webhooks page allows users to configure webhook settings and monitor webhook delivery logs.
+# Profile
 
-![Webhooks](images/webhooks.png)
+## Purpose
 
-### Webhook Configuration
+Allows users to update their profile information.
 
-The configuration section displays:
+## Editable Fields
 
-- Webhook URL
-- Secret Key
-- Webhook Status
+- Name
+- Phone Number
+- Company
 
-### Enable / Disable Webhooks
+## Read-only Fields
 
-Use the **Enable Webhooks** toggle to enable or disable webhook event generation.
+- Name
+- Email Address
 
-### Copy Webhook URL
+## Buttons
 
-Click **Copy URL** to copy the configured webhook endpoint.
+- Save Profile
+- Cancel
 
-### Regenerate Secret
+## Result
 
-Click **Regenerate Secret** to generate a new webhook secret key.
+Profile information is updated successfully.
 
-### Searching Webhooks
+![Profile](images/profile.png)
 
-Enter a Payment ID or Event Name in the search box to locate specific webhook records.
+---
 
-### Filtering Webhooks
+# Change Password
 
-Use the Status filter to display:
+## Purpose
 
-- Delivered
-- Failed
-- All
+Allows users to update their account password.
 
-### Viewing Webhook Details
+## Fields
 
-Click **View** to open the webhook details modal.
+- Current Password
+- New Password
+- Confirm Password
 
-The modal displays:
+## Validation
 
-- Event Name
-- Payment ID
-- Endpoint
-- Response
-- Payload
+- Current password is required.
+- New password is required.
+- New Password and Confirm Password must match.
 
-![Webhook Details](images/webhook-details.png)
+## Buttons
 
-### Pagination
+- Update Password
 
-Use the pagination controls at the bottom of the table to navigate through webhook records.
+## Result
 
-## 9. Support
+The account password is successfully updated.
 
-The Support module allows users to submit support requests and monitor submitted tickets.
+![Change Password](images/settings.png)
 
-![Support](images/support.png)
+---
 
-### Contact Support
+# Contact Support
 
-To submit a support request:
+## Purpose
 
-1. Open **Contact Support**.
-2. Enter the Subject.
-3. Select a Category.
-4. Enter your Message.
-5. Attach a file (optional).
-6. Click **Submit**.
+Allows users to submit support requests.
 
-### Validation
+## Fields
 
-The Contact Support form validates:
+- Name (Read Only)
+- Email (Read Only)
+- Category
+- Priority
+- Subject
+- Description
+- Screenshot
+
+## Validation
 
 - Subject is required.
-- Category must be selected.
-- Message is required.
+- Description is required.
+- Screenshot must be an image (optional).
 
-### Uploading Attachments
+## Buttons
 
-Click **Choose File** to attach a supporting document or image before submitting the request.
+- Submit Ticket
 
-### My Support Tickets
+## Result
 
-The **My Support Tickets** page displays all submitted support requests.
+A support ticket is created successfully.
 
-### Searching Support Tickets
+![Contact Support](images/contactSupport.png)
 
-Use the search box to locate tickets by Ticket ID or Subject.
+---
 
-### Filtering Support Tickets
+# Support Tickets
 
-Use the Status filter to display matching tickets.
+## Purpose
 
-### Viewing Ticket Details
+Displays all submitted support tickets.
 
-Click **View** to display the complete ticket information in a modal window.
+## Features
 
-The modal includes:
+- Search
+- Status Filter
+- Pagination
+- View Ticket
+- Delete Ticket
+
+## Table Columns
+
+- Ticket ID
+- Subject
+- Priority
+- Status
+- Created Date
+
+## Result
+
+Users can manage all submitted support requests.
+
+![Support Tickets](images/supportTickets.png)
+
+---
+
+# Support Ticket Details
+
+## Purpose
+
+Displays detailed information about a support ticket.
+
+## Information Displayed
 
 - Ticket ID
 - Subject
 - Category
-- Status
 - Priority
-- Date
+- Status
 - Description
+- Assigned To
+- Attachment
 
-![Support Ticket Details](images/support-ticket.png)
+## Buttons
 
-## 10. Profile
+- Close
+- Delete
 
-The Profile page allows users to view and update their personal information.
+## Result
 
-![Profile](images/profile.png)
+Users can review or remove an existing support ticket.
 
-### Viewing Profile
+![Support Ticket Details](images/supportTicketModal.png)
 
-The page displays:
+---
 
-- Full Name
-- Email Address
-- Phone Number
-- Company Name
+# Frequently Asked Questions
 
-### Updating Profile Information
+## Purpose
 
-1. Edit the required fields.
-2. Click **Save Changes**.
+Provides answers to common questions related to the application.
 
-### Validation
+## How to Use
 
-The application validates:
+1. Open the FAQ page.
+2. Click the **+** icon beside a question.
+3. Review the answer.
+4. Click again to collapse the section.
 
-- Full Name is required.
-- Email Address must be valid.
-- Phone Number is required.
-- Company Name is required.
-
-## 11. Settings
-
-The Settings page allows users to customize account preferences.
-
-![Settings](images/settings.png)
-
-### Personal Information
-
-Update your personal details whenever required.
-
-### Billing Information
-
-Manage billing-related information associated with your account.
-
-### Change Password
-
-To change your password:
-
-1. Enter the Current Password.
-2. Enter the New Password.
-3. Confirm the New Password.
-4. Click **Save Changes**.
-
-### Notification Preferences
-
-Enable or disable application notifications using the available checkboxes.
-
-### Appearance (Light & Dark Theme)
-
-Choose between **Light** and **Dark** themes.
-
-Changes are applied immediately after selection.
-
-## 12. Logout
-
-To securely exit the application:
-
-1. Click **Logout** from the sidebar.
-2. The application signs you out and redirects you to the Sign In page.
-
-## 13. Troubleshooting
-
-| Issue | Solution |
-|--------|----------|
-| Unable to sign in | Verify your email address and password. |
-| Payment creation failed | Ensure all required fields are completed correctly. |
-| Search returns no results | Verify the search keyword or clear active filters. |
-| Webhook logs are empty | Ensure webhooks are enabled before creating payments. |
-| File upload failed | Verify the selected file and try again. |
-| Theme not changing | Refresh the application and try again. |
-| Unable to submit a form | Verify that all required fields are completed and validation errors have been resolved.|
-
-## 14. Frequently Asked Questions
-
-### Can I edit a payment after creating it?
-
-No. Existing payment records are read-only.
-
-### Can I export payment history?
-
-Yes. Use the **Export CSV** button on the Payment History page.
-
-### How do I enable webhooks?
-
-Open **Webhooks** and enable the **Enable Webhooks** toggle.
-
-### Can I attach files to support requests?
-
-Yes. The Contact Support form supports file attachments.
-
-### How do I switch between Light and Dark themes?
-
-Open **Settings** and select your preferred theme.
-
-### Where are my support requests stored?
-
-Submitted requests are available in **My Support Tickets**.
-
-### Is application data stored permanently?
-
-No. The application stores data locally in the browser using Local Storage.
+![FAQ](images/FAQ.png)
