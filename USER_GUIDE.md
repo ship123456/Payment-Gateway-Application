@@ -324,7 +324,7 @@ Allows users to submit support requests.
 
 | Field | Description | Required | Ediatble Fields |
 |--------|-------------| -------- |
-|  Name | User's name | yes    | no|
+|  Name | User's name | yes    | no    |
 | Email | User's email  | yes    | no|
 | Category  | Category of request | yes   | yes   |
 | Priority  | Priority of request | yes   | yes   |
@@ -368,7 +368,7 @@ Displays all submitted support tickets.
 
 Users can manage all submitted support requests.
 
-![Support Tickets](images/supportTickets.png)
+![Support Tickets](images/supportTicket.png)
 
 # Support Ticket Details
 
