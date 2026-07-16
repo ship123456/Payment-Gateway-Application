@@ -31,8 +31,8 @@ The Login page allows registered users to securely access the PayFlow applicatio
 
 | Field | Description | required
 |--------|-------------| -------- |
-| Email | Registered email address | no |
-| Password | Account password |  no |
+| Email | Registered email address | yes |
+| Password | Account password |  yes |
 
 ## Buttons
 
