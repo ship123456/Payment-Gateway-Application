@@ -312,7 +312,7 @@ Allows users to update their account password.
 
 The account password is successfully updated.
 
-![Change Password](images/settings.png)
+![Change Password](images/cp.png)
 
 # Contact Support
 
