@@ -1,0 +1,11 @@
+.chart-box {
+  width: 100%;
+  height: fit-content;
+}
+
+@media (max-width: 1200px) {
+  .chart-box {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

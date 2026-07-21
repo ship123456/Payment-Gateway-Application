@@ -1,0 +1,270 @@
+.support-tickets h1 {
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.ticket-filters {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.ticket-filters input {
+  width: 380px;
+}
+
+.ticket-filters select {
+  width: 110px;
+}
+
+/* .ticket-filters button {
+  width: 140px;
+} */
+
+.ticket-filters input,
+.ticket-filters select {
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.ticket-filters button,
+.view-btn {
+  width: 90%;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.25s;
+  border-radius: 12px
+}
+
+.pagination button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.25s;
+  border-radius: 12px
+}
+
+
+
+
+
+.ticket-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ticket-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-card th,
+.ticket-card td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.ticket-card tbody tr:hover {
+  background: #f9fafb;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.failed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination .active-page {
+  background: #2563eb;
+}
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-modal {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header button {
+  border: none;
+  background: #f3f4f6;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-details div:last-child {
+  border-bottom: none;
+}
+
+.modal-details span {
+  color: #6b7280;
+}
+
+.modal-details strong {
+  color: #111827;
+  text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .ticket-filters {
+    flex-direction: column;
+  }
+
+  /* .ticket-filters input,
+  .ticket-filters select,
+  .ticket-filters button {
+    width: 100%;
+  } */
+
+  .ticket-card {
+    overflow-x: auto;
+  }
+
+  /* .ticket-card table {
+    min-width: 850px;
+  } */
+
+  .pagination {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .support-tickets h1 {
+    font-size: 28px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+  }
+
+  .payment-modal {
+    max-width: none;
+    margin: 16px;
+    padding: 20px;
+  }
+
+  .modal-details div {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .modal-details strong {
+    text-align: left;
+  }
+}
+
+.in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.resolved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.closed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ticket-modal {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
