@@ -51,7 +51,7 @@ The Login page allows registered users to securely access the PayFlow applicatio
 
 If the credentials are valid, the Dashboard page is displayed.
 
-![Login](images/login.png)
+![Login](../images/login.png)
 
 # Sign Up
 
@@ -86,7 +86,7 @@ The Sign Up page allows new users to create an account.
 
 A new account is created successfully.
 
-![Sign Up](images/signuo.png)
+![Sign Up](../images/signuo.png)
 
 
 # Dashboard
@@ -115,7 +115,7 @@ The Dashboard provides an overview of payment activity.
 
 Users can monitor payment activity from a single location.
 
-![Dashboard](images/dashboard.png)
+![Dashboard](../images/dashboard.png)
 
 # Notifications
 
@@ -129,7 +129,7 @@ The notification panel displays recent payment and application updates.
 2. Review the available notifications.
 3. Close the notification panel.
 
-![Notifications](images/notification.png)
+![Notifications](../images/notification.png)
 
 # Create a New Payment
 
@@ -175,7 +175,7 @@ Describe every validation implemented.
 
 The payment is created and the application redirects to the Payment Success page.
 
-![New Payment](images/newPayment.png)
+![New Payment](../images/newPayment.png)
 
 # Payment Success
 
@@ -201,7 +201,7 @@ Confirms successful payment creation.
 
 Users can immediately create another payment or review payment history.
 
-![Payment Success](images/payment-success.png)
+![Payment Success](../images/payment-success.png)
 
 # Payment History
 
@@ -231,7 +231,7 @@ Displays all created payments.
 
 Users can efficiently manage and review payment records.
 
-![Payment History](images/paymentHistory.png)
+![Payment History](../images/paymentHistory.png)
 
 # Payment Details
 
@@ -259,7 +259,7 @@ Displays complete information about a selected payment.
 
 Provides complete payment information without leaving the Payment History page.
 
-![Payment Details](images/paymentDetailsModal.png)
+![Payment Details](../images/paymentDetailsModal.png)
 
 # Profile
 
@@ -286,7 +286,7 @@ Allows users to update their profile information.
 
 Profile information is updated successfully.
 
-![Profile](images/profile.png)
+![Profile](../images/profile.png)
 
 # Change Password
 
@@ -314,7 +314,7 @@ Allows users to update their account password.
 
 The account password is successfully updated.
 
-![Change Password](images/cp.png)
+![Change Password](../images/cp.png)
 
 # Contact Support
 
@@ -326,7 +326,7 @@ Allows users to submit support requests.
 
 | Field | Description | Required | Ediatble Fields |
 |--------|-------------| -------- |------|
-|  Name | User's name | yes    | no    |
+| Name | User's name | yes    | no    |
 | Email | User's email  | yes    | no|
 | Category  | Category of request | yes   | yes   |
 | Priority  | Priority of request | yes   | yes   |
@@ -342,7 +342,7 @@ Allows users to submit support requests.
 
 A support ticket is created successfully.
 
-![Contact Support](images/contactSupport.png)
+![Contact Support](../images/contactSupport.png)
 
 # Support Tickets
 
@@ -370,7 +370,7 @@ Displays all submitted support tickets.
 
 Users can manage all submitted support requests.
 
-![Support Tickets](images/supportTicket.png)
+![Support Tickets](../images/supportTicket.png)
 
 # Support Ticket Details
 
@@ -398,7 +398,7 @@ Displays detailed information about a support ticket.
 
 Users can review or remove an existing support ticket.
 
-![Support Ticket Details](images/supportTicketModal.png)
+![Support Ticket Details](../images/supportTicketModal.png)
 
 # Frequently Asked Questions
 
@@ -413,4 +413,4 @@ Provides answers to common questions related to the application.
 3. Review the answer.
 4. Click again to collapse the section.
 
-![FAQ](images/FAQ.png)
+![FAQ](../images/FAQ.png)
