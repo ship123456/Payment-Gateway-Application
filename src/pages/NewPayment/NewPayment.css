@@ -143,10 +143,6 @@
   }
 }
 
-Payment Summary */ .required {
-  color: #ef4444;
-}
-
 .payment-summary {
   background: #ffffff;
   border: 1px solid #e5e7eb;
