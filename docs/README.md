@@ -49,7 +49,6 @@ The project uses React, Context API, and a service layer backed by localStorage 
 ## Authentication
 - User Login
 - User Registration
-- Protected Routes
 
 ## Dashboard
 - Payment Statistics
