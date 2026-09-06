@@ -1,101 +1,81 @@
-# PayFlow User Guide
+# Overview
 
-This guide explains how to use the PayFlow application. It covers user authentication, payment management, profile management, customer support, and frequently asked questions.
+PayFlow is a React-based payment gateway management application that simulates the complete payment lifecycle. It enables users to create and manage payments, monitor transactions, manage account information, and submit support requests through a clean and responsive interface.
 
----
+This guide explains how to use the PayFlow application, including authentication, payment management, profile management, customer support, and frequently asked questions.
 
-# Table of Contents
+# Getting Started
 
-- [Login](#login)
-- [Sign Up](#sign-up)
-- [Dashboard](#dashboard)
-- [Notifications](#notifications)
-- [Create a New Payment](#create-a-new-payment)
-- [Payment Success](#payment-success)
-- [Payment History](#payment-history)
-- [Payment Details](#payment-details)
-- [Profile](#profile)
-- [Change Password](#change-password)
-- [Contact Support](#contact-support)
-- [Support Tickets](#support-tickets)
-- [Support Ticket Details](#support-ticket-details)
-- [Frequently Asked Questions](#frequently-asked-questions)
-
-# Login
-
-## Purpose
+## Login
 
 The Login page allows registered users to securely access the PayFlow application.
 
-## Fields
+### Fields
 
-| Field | Description | required
-|--------|-------------| -------- |
-| Email | Registered email address | yes |
-| Password | Account password |  yes |
+| Field | Description | Required |
+|--------|-------------|----------|
+| Email | Registered email address | Yes |
+| Password | Account password | Yes |
 
-## Buttons
+### Buttons
 
 | Button | Description |
 |----------|-------------|
 | Login | Authenticates the user and opens the Dashboard. |
 | Sign Up | Opens the registration page for new users. |
 
-## Steps
+### Steps
 
 1. Enter your registered email address.
 2. Enter your password.
 3. Click **Login**.
 
-## Result
+### Result
 
 If the credentials are valid, the Dashboard page is displayed.
 
 ![Login](../images/login.png)
 
-# Sign Up
-
-## Purpose
+## Sign Up
 
 The Sign Up page allows new users to create an account.
 
-## Fields
+### Fields
 
-| Field | Description | Required 
-|--------|-------------| -------- |
-| Full Name | User's name | yes    |
-| Email | Email address | yes    |
-| Password | Account password | yes    |
-| Confirm Password | Account password | yes   |
+| Field | Description | Required |
+|--------|-------------|----------|
+| Full Name | User's name | Yes |
+| Email | Email address | Yes |
+| Password | Account password | Yes |
+| Confirm Password | Account password | Yes |
 
-## Buttons
+### Buttons
 
 | Button | Description |
 |----------|-------------|
 | Create Account | Creates a new account. |
 | Back to Login | Returns to the Login page. |
 
-## Steps
+### Steps
 
 1. Enter all required information.
 2. Click **Create Account**.
 3. Return to Login.
 4. Sign in using the newly created account.
 
-## Result
+### Result
 
 A new account is created successfully.
 
 ![Sign Up](../images/signuo.png)
 
+# How to Use
 
-# Dashboard
-
-## Purpose
+## Dashboard
 
 The Dashboard provides an overview of payment activity.
 
-## Available Information
+### Available Information
 
 - Total Payments
 - Successful Payments
@@ -105,25 +85,23 @@ The Dashboard provides an overview of payment activity.
 - Recent Payments
 - Notifications
 
-## Actions
+### Actions
 
 - View recent payment details.
 - Navigate to Payment History.
 - Access other application modules.
 
-## Result
+### Result
 
 Users can monitor payment activity from a single location.
 
 ![Dashboard](../images/dashboard.png)
 
-# Notifications
-
-## Purpose
+## Notifications
 
 The notification panel displays recent payment and application updates.
 
-## Steps
+### Steps
 
 1. Click the notification bell.
 2. Review the available notifications.
@@ -131,85 +109,53 @@ The notification panel displays recent payment and application updates.
 
 ![Notifications](../images/notification.png)
 
-# Create a New Payment
+# Features
 
-## Purpose
+## Payment Management
+
+The Payment Management feature allows users to create, view, search, filter, and export payment records.
+
+### Create a New Payment
 
 Allows users to create a payment transaction.
 
-## Fields
+### Fields
 
-Document every field available in your form here.
+| Field | Description | Required |
+|--------|-------------|----------|
+| Customer Name | Name of the customer | Yes |
+| Payment ID | Payment ID of the transaction | Yes |
+| Customer Email | Email address | Yes |
+| Phone Number | Customer phone number | Yes |
+| Amount | Payment amount | Yes |
+| Currency | Payment currency | Yes |
+| Payment Method | Selected payment method | Yes |
+| Description | Payment description | No |
 
-Example:
-
-| Field | Description | required
-|--------|-------------|------|
-| Customer Name | Name of the customer | yes|
-| Payment Id | payment Id of the transaction |yes|
-| Customer Email | Email address |yes|
-| Phone Number | Customer phone number |yes|
-| Amount | Payment amount |yes|
-| Currency | Payment currency |yes|
-| Payment Method | Selected payment method |yes|
-| Description | Payment description |no|
-
-## Buttons
+### Buttons
 
 | Button | Description |
 |----------|-------------|
 | Create Payment | Creates a new payment. |
 | Cancel | Returns to Dashboard. |
 
-## Steps
+### Steps
 
 1. Complete all required fields.
 2. Verify the Payment Summary.
 3. Click **Create Payment**.
 
-## Validation
-
-Describe every validation implemented.
-
-## Result
+### Result
 
 The payment is created and the application redirects to the Payment Success page.
 
 ![New Payment](../images/newPayment.png)
 
-# Payment Success
+## Payment History
 
-## Purpose
+The Payment History page displays all created payments.
 
-Confirms successful payment creation.
-
-## Information Displayed
-
-- Payment ID
-- Customer
-- Amount
-- Currency
-- Status
-- Date
-
-## Buttons
-
-- Create New Transaction
-- View Payments
-
-## Result
-
-Users can immediately create another payment or review payment history.
-
-![Payment Success](../images/payment-success.png)
-
-# Payment History
-
-## Purpose
-
-Displays all created payments.
-
-## Features
+### Features
 
 - Search
 - Status Filter
@@ -217,7 +163,7 @@ Displays all created payments.
 - Pagination
 - Payment Details
 
-## Table Columns
+### Table Columns
 
 - Payment ID
 - Customer
@@ -227,19 +173,17 @@ Displays all created payments.
 - Date
 - Actions
 
-## Result
+### Result
 
 Users can efficiently manage and review payment records.
 
 ![Payment History](../images/paymentHistory.png)
 
-# Payment Details
+## Payment Details
 
-## Purpose
+The Payment Details view displays complete information about a selected payment.
 
-Displays complete information about a selected payment.
-
-## Information Displayed
+### Information Displayed
 
 - Payment ID
 - Customer Details
@@ -250,107 +194,118 @@ Displays complete information about a selected payment.
 - Description
 - Date
 
-## Buttons
+### Buttons
 
 - Close
 - Delete
 
-## Result
+### Result
 
 Provides complete payment information without leaving the Payment History page.
 
 ![Payment Details](../images/paymentDetailsModal.png)
 
-# Profile
+## Payment Success
 
-## Purpose
+The Payment Success page confirms successful payment creation.
 
-Allows users to update their profile information.
+### Information Displayed
 
-## Fields
+- Payment ID
+- Customer
+- Amount
+- Currency
+- Status
+- Date
 
-| Field | Description | Required | Ediatble Fields 
-|--------|-------------| -------- | ------------ |
-|  Name | User's name | yes    |  no    |  
-| Email | Email address | yes    | no    |  
-| Phone number  | User's phone number | yes   |yes|
-| Company | Company name | yes   |yes|
+### Buttons
 
+- Create New Transaction
+- View Payments
 
-## Buttons
+### Result
+
+Users can immediately create another payment or review payment history.
+
+![Payment Success](../images/payment-success.png)
+
+## Profile
+
+The Profile page allows users to update their profile information.
+
+### Fields
+
+| Field | Description | Required | Editable |
+|--------|-------------|----------|----------|
+| Name | User's name | Yes | No |
+| Email | Email address | Yes | No |
+| Phone Number | User's phone number | Yes | Yes |
+| Company | Company name | Yes | Yes |
+
+### Buttons
 
 - Save Profile
 - Cancel
 
-## Result
+### Result
 
 Profile information is updated successfully.
 
 ![Profile](../images/profile.png)
 
-# Change Password
+## Change Password
 
-## Purpose
+The Change Password page allows users to update their account password.
 
-Allows users to update their account password.
-
-## Fields
+### Fields
 
 | Field | Description | Required |
-|--------|-------------| -------- |
-|  Current Password | User's password | yes    |
-|  New Password | New password  | yes    | 
-| Confirm Password  | New password should match | yes   |
+|--------|-------------|----------|
+| Current Password | User's password | Yes |
+| New Password | New password | Yes |
+| Confirm Password | New password should match | Yes |
 
-- Current Password
-- New Password
-- Confirm Password
-
-## Buttons
+### Buttons
 
 - Update Password
 
-## Result
+### Result
 
 The account password is successfully updated.
 
 ![Change Password](../images/cp.png)
 
-# Contact Support
+## Contact Support
 
-## Purpose
+The Contact Support page allows users to submit support requests.
 
-Allows users to submit support requests.
+### Fields
 
-## Fields
+| Field | Description | Required | Editable |
+|--------|-------------|----------|----------|
+| Name | User's name | Yes | No |
+| Email | User's email | Yes | No |
+| Category | Category of request | Yes | Yes |
+| Priority | Priority of request | Yes | Yes |
+| Subject | Subject of request | Yes | Yes |
+| Description | Description of request | Yes | Yes |
+| Screenshot | Screenshot of request in image format | No | Yes |
 
-| Field | Description | Required | Ediatble Fields |
-|--------|-------------| -------- |------|
-| Name | User's name | yes    | no    |
-| Email | User's email  | yes    | no|
-| Category  | Category of request | yes   | yes   |
-| Priority  | Priority of request | yes   | yes   |
-| Subject  | Subject of request | yes   | yes   |
-| Description  | Description of request | yes   | yes   |
-| Screenshot  | Screenshot of request  in image format | no   | yes   |
-
-## Buttons
+### Buttons
 
 - Submit Ticket
 
-## Result
+### Result
 
 A support ticket is created successfully.
 
 ![Contact Support](../images/contactSupport.png)
 
-# Support Tickets
+## Support Tickets
 
-## Purpose
+The Support Tickets page displays all submitted support tickets.
 
-Displays all submitted support tickets.
-
-## Features
+### Features
 
 - Search
 - Status Filter
@@ -358,7 +313,7 @@ Displays all submitted support tickets.
 - View Ticket
 - Delete Ticket
 
-## Table Columns
+### Table Columns
 
 - Ticket ID
 - Subject
@@ -366,19 +321,17 @@ Displays all submitted support tickets.
 - Status
 - Created Date
 
-## Result
+### Result
 
 Users can manage all submitted support requests.
 
 ![Support Tickets](../images/supportTicket.png)
 
-# Support Ticket Details
+## Support Ticket Details
 
-## Purpose
+The Support Ticket Details view displays detailed information about a support ticket.
 
-Displays detailed information about a support ticket.
-
-## Information Displayed
+### Information Displayed
 
 - Ticket ID
 - Subject
@@ -389,28 +342,125 @@ Displays detailed information about a support ticket.
 - Assigned To
 - Attachment
 
-## Buttons
+### Buttons
 
 - Close
 - Delete
 
-## Result
+### Result
 
 Users can review or remove an existing support ticket.
 
 ![Support Ticket Details](../images/supportTicketModal.png)
 
-# Frequently Asked Questions
+# Troubleshooting
 
-## Purpose
+## Issue
 
-Provides answers to common questions related to the application.
+**Problem:** Application does not start.
 
-## How to Use
+**Cause:** Project dependencies have not been installed.
 
-1. Open the FAQ page.
-2. Click the **+** icon beside a question.
-3. Review the answer.
-4. Click again to collapse the section.
+**Solution:**
 
-![FAQ](../images/FAQ.png)
+Run:
+
+```bash
+npm install
+```
+Then start the application:
+```
+npm start
+```
+
+## Issue
+
+**Problem:** Application does not start.
+
+**Cause:** Project dependencies have not been installed.
+
+**Solution:**
+
+Run:
+
+```bash
+npm install
+```
+Then start the application:
+```
+npm start
+```
+## Issue
+
+**Problem:** `npm install` fails.
+
+**Cause:** Node.js may not be installed, the internet connection may be unavailable, or the npm cache may be corrupted.
+
+**Solution:**
+
+- Verify that Node.js is installed.
+- Check your internet connection.
+- Clear the npm cache if required.
+
+```bash
+npm cache clean --force
+npm install
+```
+
+text-formatter-pro(5).zip
+Zip Archive
+Pasted markdown(20260906-180727).md
+File
+Yh dekh itni badi.. Kya change krega phle heading dede muje
+# Troubleshooting
+
+## Issue
+
+**Problem:** Application does not start.
+
+**Cause:** Project dependencies have not been installed.
+
+**Solution:**
+
+Run:
+
+```bash
+npm install
+```
+Then start the application:
+
+npm start
+n
+## Issue
+
+**Problem:** `npm install` fails.
+
+**Cause:** Node.js may not be installed, the internet connection may be unavailable, or the npm cache may be corrupted.
+
+**Solution:**
+
+- Verify that Node.js is installed.
+- Check your internet connection.
+- Clear the npm cache if required.
+
+```bash
+npm cache clean --force
+npm install
+faq de
+# FAQ
+
+## Q
+
+**How do I create a payment?**
+
+### A
+
+Go to **New Payment**, enter the required payment details, and submit the payment.
+
+## Q
+
+**Why can't I log in?**
+
+### A
+
+Verify your email address and password. If you do not have an account, create a new account using **Sign Up**.
