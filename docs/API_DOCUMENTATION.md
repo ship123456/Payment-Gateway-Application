@@ -95,6 +95,137 @@ Returns payment statistics displayed on the dashboard.
 
 Returns an appropriate error response if the request fails.
 
+# Payment
+
+PayFlow provides **9 payment endpoints**:
+
+- Get All Payments
+- Get Payment Details
+- Create Payment
+- Update Payment
+- Delete Payment
+- Search Payments
+- Filter Payments
+- Export Payments
+- Pagination
+
+**The following section shows one representative endpoint. The remaining endpoints follow a similar documentation flow.**
+
+## Endpoint
+
+### Create Payment
+
+**POST** `/payments`
+
+Creates a new payment transaction.
+
+### Request
+
+| Field | Type | Description |
+|---|---|---|
+| recipient | string | Name of the payment recipient |
+| amount | number | Payment amount |
+| currency | string | Payment currency |
+| paymentMethod | string | Selected payment method |
+
+### Response
+
+| Field | Type | Description |
+|---|---|---|
+| message | string | Confirmation message for successful payment creation |
+
+**Error Response**
+
+Returns an appropriate error response for invalid payment details.
+
+# Profile & Password
+
+PayFlow provides **3 profile and password endpoints**:
+
+- Get Profile
+- Update Profile
+- Change Password
+
+**The following section shows one representative endpoint. The remaining endpoints follow a similar documentation flow.**
+
+## Endpoint
+
+### Update Profile
+
+**PUT** `/profile`
+
+Updates user profile details.
+
+### Request
+
+| Field | Type | Description |
+|---|---|---|
+| name | string | User's name |
+| phone | string | User's phone number |
+
+### Response
+
+| Field | Type | Description |
+|---|---|---|
+| message | string | Confirmation message for successful profile update |
+
+**Error Response**
+
+Returns an appropriate error response if the profile update fails.
+
+# Support & FAQ
+
+PayFlow provides **4 support and FAQ endpoints**:
+
+- Create Support Ticket
+- Get Support Tickets
+- Get Support Ticket Details
+- Get FAQs
+
+**The following section shows one representative endpoint. The remaining endpoints follow a similar documentation flow.**
+
+## Endpoint
+
+### Create Support Ticket
+
+**POST** `/support/tickets`
+
+Creates a new support request.
+
+### Request
+
+| Field | Type | Description |
+|---|---|---|
+| subject | string | Subject of the support request |
+| category | string | Category of the request |
+| description | string | Description of the issue |
+
+### Response
+
+| Field | Type | Description |
+|---|---|---|
+| message | string | Confirmation message for successful ticket creation |
+
+**Error Response**
+
+Returns an appropriate error response if the support ticket cannot be created.
+
+# Status Codes
+
+**200** → Request completed successfully
+
+**201** → Resource created successfully
+
+**204** → Deleted / No Content
+
+**400** → Bad Request
+
+**401** → Unauthorized
+
+**403** → Forbidden
+
+**404** → Not Found
+
 
 
 
