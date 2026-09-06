@@ -1,148 +1,159 @@
 # Technical Overview
 
-This document provides a technical overview of the PayFlow application, including its architecture, technologies, modules, state management, data flow, and implementation details.
+This document provides a technical overview of the PayFlow application, including its architecture, technologies, features, state management, data flow, and implementation details.
 
 ---
 
 ## Table of Contents
 
-- [Version Information](#version-information)
 - [Overview](#overview)
-- [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
-- [Application Workflow](#application-workflow)
-- [Modules](#modules)
+- [Architecture](#architecture)
+- [Features](#features)
 - [State Management](#state-management)
-- [Service Layer](#service-layer)
-- [Known Limitations](#known-limitations) 
+- [Data Flow](#data-flow)
+- [Limitations](#limitations)
 
-# Version Information
-
-| Property | Value |
-|---|---|
-| Version | 1.0.0 |
-| Release Date | July 2026 |
-| Status | Stable |
+---
 
 # Overview
 
-PayFlow is a React-based payment gateway management application designed to simulate the complete payment lifecycle. The application allows users to authenticate, create and manage payments, monitor payment statistics, manage account information, and submit customer support requests.
+The document explains how the different components of the PayFlow application communicate with each other, the styles and utility functions involved, and the complete workflow of the project.
 
-The application follows a client-side architecture where React components manage the user interface, Context API manages shared state, services handle business logic, and localStorage simulates persistent data storage.
-
-# System Architecture
-
-The application follows a layered architecture consisting of presentation, state management, business logic, and data storage.
-
-```text
-User
-        │
-        ▼
-React Components (UI)
-        │
-        ▼
-Context API
-        │
-        ▼
-Service Layer
-        │
-        ▼
-localStorage
+---
 
 # Technology Stack
 
-The project was developed using the following technologies:
+### Frontend
 
 - React
-- JavaScript (ES6+)
-- Context API
-- React Router
-- CSS3
-- Recharts
-- React Toastify
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+
+- Simulated API
+
+### Storage
+
 - localStorage
+
+### Routing
+
+- React Router
+
+### Charts
+
+- Recharts
+
+### Packages
+
+- date.js
+- React Toastify
+
+### Development Tools
+
+- Visual Studio Code
+
+---
 
 # Project Structure
 
 ```text
 src/
-├── components/
-├── context/
-├── layouts/
-├── pages/
-├── services/
-├── styles/
+├── components/            # Reusable UI components
+├── context/               # React Context providers
+├── layouts/               # Application layouts
+├── pages/                 # Application pages
+├── services/              # Business logic and storage operations
+├── styles/                # Global styles
 ├── App.js
 └── index.js
 
-# Application Workflow
+# Architecture
 
-The overall application workflow is shown below.
+The project follows a layered architecture where each layer has a different responsibility.
 
-```text
-Login / Sign Up
-        │
-        ▼
-Dashboard
-        │
-        ├── New Payment
-        ├── Payment History
-        ├── Profile
-        ├── Change Password
-        ├── Contact Support
-        ├── Support Tickets
-        └── FAQ
+- **Presentation Layer** – Handles the user interface and components.
+- **Business Layer** – Handles application logic and utility functions.
+- **State Management Layer** – Uses Context API to manage shared application state.
+- **Data Storage Layer** – Uses localStorage for data persistence.
 
-# Modules
+---
+
+# Features
 
 ## Authentication
 
-Manages login, registration, logout, and password updates.
+- Login
+- User Registration
+- Logout
 
 ## Dashboard
 
-Provides an overview of application activity, including payment statistics, monthly payment charts, recent payments, and notifications.
+- Payment Statistics
+- Monthly Payment Chart
+- Recent Payments
+- Notifications
 
-## Payments
+## Payment Management
 
-Manages payment creation and payment history, including search, status filtering, CSV export, pagination, and payment details.
+- Create New Payment
+- Payment History
+- Payment Details
+- Search Payments
+- Filter Payments
+- Export Payments
+- Pagination
 
-## Profile & Password
+## User Management
 
-Allows users to update profile information and change their password with validation.
+- Profile Management
+- Change Password
 
 ## Customer Support
 
-Enables users to submit and manage support requests, including support tickets, ticket details, and FAQ functionality.
+- Contact Support
+- Support Tickets
+- Ticket Details
+- FAQ
+
+---
 
 # State Management
 
-The application uses Context API for shared state management.
-
-Major contexts include:
+The application uses Context API for managing shared application state.
 
 - Authentication Context
 - Payment Context
 
-This eliminates unnecessary prop drilling and centralizes application data.
+This centralizes shared data and reduces unnecessary prop drilling.
 
-# Service Layer
+---
 
-Business logic is separated from UI components using dedicated service modules.
+# Data Flow
 
-Examples include:
+The application follows a simple data flow between the user interface, state management, business logic, and storage layer.
 
-- Authentication Service
-- Payment Service
-- Dashboard Service
-- Profile Service
-- Settings Service
-- Support Service
+```text
+User
+  │
+  ▼
+React Components
+  │
+  ▼
+Context API
+  │
+  ▼
+Service / Business Logic
+  │
+  ▼
+localStorage
+```
 
-This separation improves maintainability and simplifies future backend integration.
-
-# Known Limitations
+# Limitations
 
 - Uses localStorage instead of a backend database.
 - Authentication is simulated.
