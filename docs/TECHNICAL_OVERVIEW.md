@@ -71,6 +71,7 @@ src/
 ├── styles/                # Global styles
 ├── App.js
 └── index.js
+```
 
 # Architecture
 
