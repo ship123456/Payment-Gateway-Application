@@ -2,14 +2,12 @@
 
 PayFlow is a React-based payment gateway management application that simulates the complete payment lifecycle. It enables users to create and manage payments, monitor transactions, manage account information, and submit support requests through a clean and responsive interface.
 
-
 ![Dashboard](../images/dashboard.png)
 
 ## Table of Contents
 - [Overview](#overview)
 - [Version Information](#version-information)
 - [Live Demo](#live-demo)
-- [Demo Access](#demo-access)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
@@ -17,8 +15,6 @@ PayFlow is a React-based payment gateway management application that simulates t
 - [Installation](#installation)
 - [Usage](#usage)
 - [Known Limitations](#known-limitations)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
 
 ## Version Information
 
@@ -32,8 +28,6 @@ PayFlow is a React-based payment gateway management application that simulates t
 ## Live Demo
 
 https://payment-gateway-application.vercel.app
-
-## Demo Credentials
 
 **Email:** admin@payflow.com
 **Password:** password1234
@@ -173,19 +167,3 @@ http://localhost:3000
 - Authentication is simulated.
 - No real payment gateway integration.
 - Data is stored locally and is not synchronized across devices.
-
-# Future Enhancements
-
-- Backend API integration
-- JWT-based authentication
-- Database integration
-- Real payment gateway integration
-- Email verification
-- Password recovery via email
-- Role-based access control
-- Real-time payment updates
-- Transaction analytics and reporting
-
-# License
-
-This project was created for educational and portfolio purposes.
