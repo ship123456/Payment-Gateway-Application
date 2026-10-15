@@ -185,11 +185,6 @@ The Payment Details view displays complete information about a selected payment.
 - Description
 - Date
 
-### Buttons
-
-- Close
-- Delete
-
 ### Result
 
 Provides complete payment information without leaving the Payment History page.
