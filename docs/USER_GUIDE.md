@@ -8,7 +8,6 @@ USER-GUIDE
 - [Features](#features)
 - [Common Tasks](#common-tasks)
 - [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
 
 # Overview
 
@@ -406,25 +405,3 @@ n
 - Verify that Node.js is installed.
 - Check your internet connection.
 - Clear the npm cache if required.
-
-```bash
-npm cache clean --force
-npm install
-faq de
-# FAQ
-
-## Q
-
-**How do I create a payment?**
-
-### A
-
-Go to **New Payment**, enter the required payment details, and submit the payment.
-
-## Q
-
-**Why can't I log in?**
-
-### A
-
-Verify your email address and password. If you do not have an account, create a new account using **Sign Up**.
