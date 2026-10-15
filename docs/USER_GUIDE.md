@@ -54,13 +54,6 @@ The Sign Up page allows new users to create an account.
 | Password | Account password | Yes |
 | Confirm Password | Account password | Yes |
 
-### Buttons
-
-| Button | Description |
-|----------|-------------|
-| Create Account | Creates a new account. |
-| Back to Login | Returns to the Login page. |
-
 ### Steps
 
 1. Enter all required information.
@@ -136,13 +129,6 @@ Allows users to create a payment transaction.
 | Currency | Payment currency | Yes |
 | Payment Method | Selected payment method | Yes |
 | Description | Payment description | No |
-
-### Buttons
-
-| Button | Description |
-|----------|-------------|
-| Create Payment | Creates a new payment. |
-| Cancel | Returns to Dashboard. |
 
 ### Steps
 
@@ -223,11 +209,6 @@ The Payment Success page confirms successful payment creation.
 - Status
 - Date
 
-### Buttons
-
-- Create New Transaction
-- View Payments
-
 ### Result
 
 Users can immediately create another payment or review payment history.
@@ -247,11 +228,6 @@ The Profile page allows users to update their profile information.
 | Phone Number | User's phone number | Yes | Yes |
 | Company | Company name | Yes | Yes |
 
-### Buttons
-
-- Save Profile
-- Cancel
-
 ### Result
 
 Profile information is updated successfully.
@@ -269,10 +245,6 @@ The Change Password page allows users to update their account password.
 | Current Password | User's password | Yes |
 | New Password | New password | Yes |
 | Confirm Password | New password should match | Yes |
-
-### Buttons
-
-- Update Password
 
 ### Result
 
@@ -296,9 +268,6 @@ The Contact Support page allows users to submit support requests.
 | Description | Description of request | Yes | Yes |
 | Screenshot | Screenshot of request in image format | No | Yes |
 
-### Buttons
-
-- Submit Ticket
 
 ### Result
 
@@ -346,11 +315,6 @@ The Support Ticket Details view displays detailed information about a support ti
 - Description
 - Assigned To
 - Attachment
-
-### Buttons
-
-- Close
-- Delete
 
 ### Result
 
