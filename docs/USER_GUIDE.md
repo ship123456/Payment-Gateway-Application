@@ -29,13 +29,6 @@ The Login page allows registered users to securely access the PayFlow applicatio
 | Email | Registered email address | Yes |
 | Password | Account password | Yes |
 
-### Buttons
-
-| Button | Description |
-|----------|-------------|
-| Login | Authenticates the user and opens the Dashboard. |
-| Sign Up | Opens the registration page for new users. |
-
 ### Steps
 
 1. Enter your registered email address.
